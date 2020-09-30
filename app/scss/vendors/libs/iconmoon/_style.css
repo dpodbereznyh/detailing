@@ -1,14 +1,15 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('../fonts/icomoon.eot?913obi');
-  src:  url('../fonts/icomoon.eot?913obi#iefix') format('embedded-opentype'),
-  url('../fonts/icomoon.ttf?913obi') format('truetype'),
-  url('../fonts/icomoon.woff?913obi') format('woff'),
-  url('../fonts/icomoon.svg?913obi#icomoon') format('svg');
+  src:  url('../fonts/icomoon.eot?nrwd2n');
+  src:  url('../fonts/icomoon.eot?nrwd2n#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?nrwd2n') format('truetype'),
+    url('../fonts/icomoon.woff?nrwd2n') format('woff'),
+    url('../fonts/icomoon.svg?nrwd2n#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
+
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
@@ -24,9 +25,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-arrow-next:before {
+.icon-instagram-icon:before {
   content: "\e900";
+  color: #fff;
 }
-.icon-arrow-prev:before {
+.icon-vk-icon:before {
   content: "\e901";
+  color: #fff;
+}
+.icon-whatsapp-icon:before {
+  content: "\e902";
+  color: #fff;
 }
