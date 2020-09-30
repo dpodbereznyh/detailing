@@ -10,7 +10,8 @@
 // ----------------------------------------------------------
 // :: 1.1. Colors
 // ----------------------------------------------------------
-$dark: #242424;
+$light: #ffffff;
+$dark: #121212;
 $dark_1: lighten($dark, 5%);
 $dark_2: lighten($dark, 10%);
 $dark_3: lighten($dark, 20%);
@@ -21,16 +22,61 @@ $dark_7: lighten($dark, 60%);
 $dark_8: lighten($dark, 70%);
 $dark_9: lighten($dark, 80%);
 
-$default: #05C8B2;
-$default_l1: lighten($default, 5%);
-$default_l2: lighten($default, 10%);
-$default_l3: lighten($default, 35%);
-$default_l4: lighten($default, 50%);
+$default: #4A8B99;
+$default_l1: lighten($default, 10%);
+$default_l2: lighten($default, 20%);
+$default_l3: lighten($default, 30%);
+$default_l4: lighten($default, 40%);
 
 $default_d1: darken($default, 5%);
 $default_d2: darken($default, 10%);
-$default-d3: darken($default, 15%);
-$default_d4: darken($default, 20%);
+$default-d3: darken($default, 20%);
+$default_d4: darken($default, 25%);
+
+$secondary: #D96832;
+$secondary_l1: lighten($secondary, 5%);
+$secondary_l2: lighten($secondary, 10%);
+$secondary_l3: lighten($secondary, 15%);
+$secondary_l4: lighten($secondary, 25%);
+
+$secondary_d1: darken($secondary, 5%);
+$secondary_d2: darken($secondary, 10%);
+$secondary_d3: darken($secondary, 15%);
+$secondary_d4: darken($secondary, 20%);
+
+$notice: #EB7100;
+$notice_l1: lighten($notice, 10%);
+$notice_l2: lighten($notice, 15%);
+$notice_l3: lighten($notice, 20%);
+$notice_l4: lighten($notice, 25%);
+
+$notice_d1: darken($notice, 5%);
+$notice_d2: darken($notice, 10%);
+$notice_d3: darken($notice, 15%);
+$notice_d4: darken($notice, 20%);
+
+$error: #D70000;
+$error_l1: lighten($error, 10%);
+$error_l2: lighten($error, 20%);
+$error_l3: lighten($error, 30%);
+$error_l4: lighten($error, 40%);
+
+$error_d1: darken($error, 10%);
+$error_d2: darken($error, 20%);
+$error_d3: darken($error, 25%);
+$error_d4: darken($error, 30%);
+
+$progress: #709419;
+$progress_l1: lighten($progress, 5%);
+$progress_l2: lighten($progress, 10%);
+$progress_l3: lighten($progress, 15%);
+$progress_l4: lighten($progress, 20%);
+
+$progress_d1: darken($progress, 5%);
+$progress_d2: darken($progress, 10%);
+$progress_d3: darken($progress, 15%);
+$progress_d4: darken($progress, 20%);
+
 
 $sm-clean__white:										#fff !default;
 $sm-clean__gray:										darken($sm-clean__white, 6.5%) !default;
@@ -45,25 +91,25 @@ $sm-clean__box-shadow:									rgba(0, 0, 0, 0.2) !default;
 // :: 1.2. Breakpoints
 // ----------------------------------------------------------
 
-$sm-clean__desktop-vp:									1100px !default;		// switch from collapsible to desktop
+$sm-clean__desktop-vp:									1100.5px !default;		// switch from collapsible to desktop
 
 
 // ----------------------------------------------------------
 // :: 1.3. Typography
 // ----------------------------------------------------------
 
-$sm-clean__font-family:									"Rubik",sans-serif;
-//$sm-clean__font-size-base:								16px !default;
-//$sm-clean__font-size-small:								16px !default;
-$sm-clean__line-height:									16px !default;
+$sm-clean__font-family:									"Lucida Sans Unicode", "Lucida Sans", "Lucida Grande", Arial, sans-serif !default;
+$sm-clean__font-size-base:								18px !default;
+$sm-clean__font-size-small:								16px !default;
+$sm-clean__line-height:									17px !default;
 
 
 // ----------------------------------------------------------
 // :: 1.4. Borders
 // ----------------------------------------------------------
 
-$sm-clean__border-width:								0px !default;
-$sm-clean__border-radius:								0px !default;
+$sm-clean__border-width:								1px !default;
+$sm-clean__border-radius:								5px !default;
 
 
 // ----------------------------------------------------------
@@ -82,7 +128,7 @@ $sm-clean__collapsible-item-padding-vertical:			13px !default;
 $sm-clean__collapsible-item-padding-horizontal:			20px !default;
 
 // Items separators
-$sm-clean__collapsible-separators-color:				rgba(0, 0, 0, 0.05) !default;
+$sm-clean__collapsible-separators-color:				rgba(255, 255, 255, 0.5) !default;
 
 // Toggle button (sub menu indicators)
 $sm-clean__collapsible-toggle-bg:						rgba(255, 255, 255, 0.5) !default;
@@ -104,20 +150,20 @@ $sm-clean__collapsible-sub-item-indentation:			8px !default;
 // ----------------------------------------------------------
 
 // Menu box
-$sm-clean__desktop-bg:									transparent !default;
-$sm-clean__desktop-border-radius:						0 !default;
-$sm-clean__desktop-padding-horizontal:					0 !default;
+$sm-clean__desktop-bg:									$sm-clean__gray !default;
+$sm-clean__desktop-border-radius:						100px !default;
+$sm-clean__desktop-padding-horizontal:					10px !default;
 
 // Items
-$sm-clean__desktop-item-color:							$light !default;
-$sm-clean__desktop-item-hover-color:					$light !default;
-$sm-clean__desktop-item-current-color:					$light !default;
+$sm-clean__desktop-item-color:							$sm-clean__gray-darker !default;
+$sm-clean__desktop-item-hover-color:					$sm-clean__red !default;
+$sm-clean__desktop-item-current-color:					$sm-clean__red !default;
 $sm-clean__desktop-item-disabled-color:					darken($sm-clean__gray, 20%) !default;
-$sm-clean__desktop-item-padding-vertical:				0px !default;
-$sm-clean__desktop-item-padding-horizontal:				0px !default;
+$sm-clean__desktop-item-padding-vertical:				12px !default;
+$sm-clean__desktop-item-padding-horizontal:				12px !default;
 
 // Sub menu indicators
-$sm-clean__desktop-arrow-size:							6px !default;		// border-width
+$sm-clean__desktop-arrow-size:							4px !default;		// border-width
 $sm-clean__desktop-arrow-color:							$sm-clean__gray-darker !default;
 $sm-clean__desktop-arrow-spacing:						4px !default;
 
@@ -177,12 +223,11 @@ $sm-clean__toggle-spacing: floor($sm-clean__item-height * 0.1);
 
 // Main menu box
 .sm-clean {
-	background: transparent;
-	border-radius: 0px;
+	background: $sm-clean__collapsible-bg;
+	border-radius: $sm-clean__collapsible-border-radius;
 
 	// Main menu items
 	a {
-		color: $dark;
 		&,
 		&:hover,
 		&:focus,
@@ -190,12 +235,9 @@ $sm-clean__toggle-spacing: floor($sm-clean__item-height * 0.1);
 			padding: $sm-clean__collapsible-item-padding-vertical $sm-clean__collapsible-item-padding-horizontal;
 			/* make room for the toggle button (sub indicator) */
 			padding-right: $sm-clean__collapsible-item-padding-horizontal + $sm-clean__toggle-size + $sm-clean__toggle-spacing;
-			color: $dark;
-			//font-family: $sm-clean__font-family;
-
-			//font-weight: normal;
-			//line-height: $sm-clean__line-height;
-			//text-decoration: none;
+			color: #fff;
+			font-family: "Montserrat", sans-serif;
+			text-transform: uppercase;
 		}
 
 		&.current {
@@ -210,16 +252,17 @@ $sm-clean__toggle-spacing: floor($sm-clean__item-height * 0.1);
 		.sub-arrow {
 			position: absolute;
 			top: 50%;
-			right: 50px;
-			transform: translate(0, -50%);
-			//width: $sm-clean__toggle-size;
-			//height: $sm-clean__toggle-size;
-			//overflow: hidden;
-			//font: bold #{$sm-clean__font-size-small}/#{$sm-clean__toggle-size} monospace !important;
-			//text-align: center;
-			//text-shadow: none;
-			//background: $sm-clean__collapsible-toggle-bg;
-			//border-radius: $sm-clean__border-radius;
+			margin-top: -(ceil($sm-clean__toggle-size / 2));
+			left: auto;
+			right: $sm-clean__toggle-spacing;
+			width: $sm-clean__toggle-size;
+			height: $sm-clean__toggle-size;
+			overflow: hidden;
+			font: bold #{$sm-clean__font-size-small}/#{$sm-clean__toggle-size} monospace !important;
+			text-align: center;
+			text-shadow: none;
+			background: $sm-clean__collapsible-toggle-bg;
+			border-radius: $sm-clean__border-radius;
 		}
 		.sub-arrow::before {
 			content: '+';
@@ -231,14 +274,30 @@ $sm-clean__toggle-spacing: floor($sm-clean__item-height * 0.1);
 
 	// round the corners of the first item
 	> li:first-child > a, > li:first-child > :not(ul) a {
-		border-radius: 0px;
+		border-radius: $sm-clean__collapsible-border-radius $sm-clean__collapsible-border-radius 0 0;
+	}
+	> li:last-child {
+		background: $default;
+		margin: 8px auto;
+		border-bottom: 0;
+		width: fit-content;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		&:hover {
+			background: $default_d3;
+		}
+		a {
+			padding: 10px 20px;
+		}
+
 	}
 	// round the corners of the last item
 	@include sm-clean__round-corners-last-item($sm-clean__collapsible-border-radius);
 
 	// Main menu items separators
 	li {
-		border-top: 1px solid $dark_8;
+		border-bottom: 1px solid $sm-clean__collapsible-separators-color;
 	}
 	> li:first-child {
 		border-top: 0;
@@ -246,7 +305,7 @@ $sm-clean__toggle-spacing: floor($sm-clean__item-height * 0.1);
 
 	// Sub menus box
 	ul {
-		background: #FFE7D6;
+		background: $sm-clean__collapsible-sub-bg;
 
 		// Sub menus items
 		a {
@@ -254,8 +313,9 @@ $sm-clean__toggle-spacing: floor($sm-clean__item-height * 0.1);
 			&:hover,
 			&:focus,
 			&:active {
-
+				font-size: $sm-clean__font-size-small;
 				// add indentation for sub menus text
+				border-left: $sm-clean__collapsible-sub-item-indentation solid transparent;
 			}
 		}
 
@@ -277,7 +337,7 @@ $sm-clean__toggle-spacing: floor($sm-clean__item-height * 0.1);
 	   collapsible to desktop (navbar + dropdowns)
 	-----------------------------------------------*/
 	/* start... (it's not recommended editing these rules) */
-	.sm-clean ul{position:absolute;width:20em;}
+	.sm-clean ul{position:absolute;width:12em;}
 	.sm-clean li{float:left;}
 	.sm-clean.sm-rtl li{float:right;}
 	.sm-clean ul li,.sm-clean.sm-rtl ul li,.sm-clean.sm-vertical li{float:none;}
@@ -299,26 +359,24 @@ $sm-clean__toggle-spacing: floor($sm-clean__item-height * 0.1);
 			&:focus,
 			&:active,
 			&.highlighted {
-				padding: 0;
-				color: $dark;
+				padding: $sm-clean__desktop-item-padding-vertical $sm-clean__desktop-item-padding-horizontal;
+				color: $sm-clean__desktop-item-color;
 				border-radius: 0 !important;
-				transition: .35s;
 			}
 
 			&:hover,
 			&:focus,
 			&:active,
 			&.highlighted {
-				color: $default;
-				transition: .35s;
+				color: $sm-clean__desktop-item-hover-color;
 			}
 
 			&.current {
-				color: $default;
+				color: $sm-clean__desktop-item-current-color;
 			}
 
 			&.disabled {
-				color: $default;
+				color: $sm-clean__desktop-item-disabled-color;
 			}
 
 			// Make room for the sub arrows
@@ -329,16 +387,15 @@ $sm-clean__toggle-spacing: floor($sm-clean__item-height * 0.1);
 			// Sub menu indicators
 			.sub-arrow {
 				top: 50%;
-				transform: translate(0, -50%);
-				//margin-top: -(ceil($sm-clean__desktop-arrow-size / 2));
-				//right: 8px;
-				//width: 6px;
-				//height: 3px;
-				//border-width: $sm-clean__desktop-arrow-size;
-				//border-style: solid dashed dashed dashed;
-				//border-color: $sm-clean__desktop-arrow-color transparent transparent transparent;
-
-				//border-radius: 0;
+				margin-top: -(ceil($sm-clean__desktop-arrow-size / 2));
+				right: $sm-clean__desktop-item-padding-horizontal;
+				width: 0;
+				height: 0;
+				border-width: $sm-clean__desktop-arrow-size;
+				border-style: solid dashed dashed dashed;
+				border-color: $sm-clean__desktop-arrow-color transparent transparent transparent;
+				background: transparent;
+				border-radius: 0;
 			}
 			// reset mobile first style
 			.sub-arrow::before {
@@ -349,13 +406,11 @@ $sm-clean__toggle-spacing: floor($sm-clean__item-height * 0.1);
 		// No main menu items separators
 		li {
 			border-top: 0;
-			width: fit-content;
 		}
 
 		// First sub level carets
 		> li > ul::before,
  		> li > ul::after {
-			display: none;
 			content: '';
 			position: absolute;
 			top: -($sm-clean__desktop-sub-caret-size * 2 + $sm-clean__border-width * 2);
@@ -376,12 +431,11 @@ $sm-clean__toggle-spacing: floor($sm-clean__item-height * 0.1);
 
 		// Sub menus box
 		ul {
-			border: .5px solid $orange;
-			padding: 0px;
-			margin-top: 0px!important;
+			border: $sm-clean__border-width solid $sm-clean__desktop-sub-border-color;
+			padding: $sm-clean__desktop-sub-padding-vertical $sm-clean__desktop-sub-padding-horizontal;
 			background: $sm-clean__desktop-sub-bg;
-			border-radius: 0px;
-			box-shadow: none;
+			border-radius: $sm-clean__desktop-sub-border-radius !important;
+			box-shadow: $sm-clean__desktop-sub-box-shadow;
 
 			// Sub menus items
 			a {
@@ -399,7 +453,7 @@ $sm-clean__toggle-spacing: floor($sm-clean__item-height * 0.1);
 				&:focus,
 				&:active,
 				&.highlighted {
-					background: transparent;
+					background: $sm-clean__desktop-sub-item-hover-bg;
 					color: $sm-clean__desktop-sub-item-hover-color;
 				}
 
@@ -408,7 +462,7 @@ $sm-clean__toggle-spacing: floor($sm-clean__item-height * 0.1);
 				}
 
 				&.disabled {
-					background: transparent;
+					background: $sm-clean__desktop-sub-bg;
 					color: $sm-clean__desktop-sub-item-disabled-color;
 				}
 
@@ -557,11 +611,11 @@ $sm-clean__toggle-spacing: floor($sm-clean__item-height * 0.1);
 				&:focus,
 				&:active,
 				&.highlighted {
-					background: transparent;
+					background: $sm-clean__desktop-vertical-item-hover-bg;
 				}
 
 				&.disabled {
-					background: transparent;
+					background: $sm-clean__desktop-bg;
 				}
 
 				// Sub menu indicators
@@ -592,11 +646,11 @@ $sm-clean__toggle-spacing: floor($sm-clean__item-height * 0.1);
 					&:focus,
 					&:active,
 					&.highlighted {
-						background: transparent;
+						background: $sm-clean__desktop-sub-item-hover-bg;
 					}
 
 					&.disabled {
-						background: transparent;
+						background: $sm-clean__desktop-sub-bg;
 					}
 				}
 			}

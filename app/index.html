@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>DETAILING</title>
-    <link rel="icon" href="#">
+    <link rel="icon" href="img/logo/logo.svg">
     <link rel="apple-touch-icon" sizes="180x180" href="#">
     <link rel="icon" type="image/png" sizes="32x32" href="#">
     <link rel="icon" type="image/png" sizes="16x16" href="#">
@@ -24,7 +24,7 @@
 <body>
 <header class="header" id="header">
     <div class="container-fluid">
-        <div class="header__wrap">
+        <div class="header__wrap d-none d-lg-flex">
             <div class="header__logo">
                 <img src="img/header/header-logo.svg" alt="DETAILING">
             </div>
@@ -63,8 +63,33 @@
                 <li class="header__social_item"><a href="#" class="header__social_link icon-moon">&#xe900;</a></li>
                 <li class="header__social_item"><a href="#" class="header__social_link icon-moon">&#xe901;</a></li>
             </ul>
-        </div>        
+        </div>               
     </div>
+    <nav class="main-nav">
+        <div class="container-fluid">
+            <!-- Mobile menu toggle button (hamburger/x icon) -->
+            <input id="main-menu-state" type="checkbox" />
+            <label class="main-menu-btn" for="main-menu-state">
+            <span class="main-menu-btn-icon"></span> Toggle main menu visibility
+            </label>
+        
+            <div class="main-nav__logo d-block d-lg-none">
+                <img src="img/header/header-logo.svg" alt="DETAILING">
+            </div>        
+            <ul id="main-menu" class="sm sm-clean">
+                <li><a href="#" class="strong">Видео</a></li>
+                <li><a href="#" class="strong">О нас</a></li>
+                <li><a href="#" class="strong">Преимущества</a></li>
+                <li><a href="#" class="strong">Цены</a></li>
+                <li><a href="#" class="strong">Галерея</a></li>
+                <li><a href="#" class="strong">Отзывы</a></li>
+                <li><a href="#" class="strong">Контакты</a></li>  
+                <li><a href="#" class="strong">Консультация</a></li>
+            </ul>
+            
+        </div>
+        
+      </nav>
 </header>
 <main class="main">
     
