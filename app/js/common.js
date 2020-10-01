@@ -58,7 +58,7 @@ $(document).ready(function () {
     $(".yakor").on("click", function (event) {
         event.preventDefault();
         var id  = $(this).attr('href'),
-            top = $(id).offset().top -160;
+            top = $(id).offset().top -64;
         $('body,html').animate({scrollTop: top}, 500);
     });
 
