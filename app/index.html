@@ -40,7 +40,7 @@
                     </div>
                     <div class="header__contacts_item_inner">
                         <div class="header__contacts_item_icon">
-                            <img src="img/icons/phone-icon.svg" alt="Телефон">
+                            <img src="img/icons/phone-icon.svg" alt="Контактный телефон">
                         </div>
                         <a href="tel:+79689099094" class="header__contacts_item_content header__contacts_item-link h4 header__contacts_item_content-secondary">
                             +7 (968) 909-909-4
@@ -50,7 +50,7 @@
                 <li class="header__contacts_item">
                     <div class="header__contacts_item_inner">
                         <div class="header__contacts_item_icon">
-                            <img src="img/icons/clock-icon.svg" alt="Адрес">
+                            <img src="img/icons/clock-icon.svg" alt="Режим работы">
                         </div>
                         <p class="header__contacts_item_content h4 header__contacts_item_content-light">
                             Режим работы<br><span class="header__contacts_item_content-secondary">ежедневно с 9.00-20.00</span>
@@ -61,7 +61,7 @@
             <ul class="header__social_list">
                 <li class="header__social_item"><a href="#" class="header__social_link icon-moon">&#xe902;</a></li>
                 <li class="header__social_item"><a href="#" class="header__social_link icon-moon">&#xe900;</a></li>
-                <li class="header__social_item"><a href="#" class="header__social_link icon-moon">&#xe901;</a></li>
+                <li class="header__social_item"><a href="#" class="header__social_link header__social_link-vk icon-moon">&#xe901;</a></li>
             </ul>
         </div>               
     </div>
@@ -90,10 +90,66 @@
     </nav>
 </header>
 <main class="main">
-    
+    <section class="section contacts" id="contacts">
+        <div class="container-fluid">
+            <h2 class="section__title h2">
+                Как добраться
+            </h2>
+            <div class="contacts__wrap">
+                <div class="contacts__map">
+                    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A1c757e1fc6635eb1a9107a83d913f67c73b0834da8a009cd6c068c3a12fe23de&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
+                </div>
+                <div class="contacts__list_wrap">
+                    <ul class="contacts__list">
+                        <li class="contacts__item">
+                            <div class="contacts__item_icon">
+                                <img src="img/icons/location-icon.svg" alt="Адрес">
+                            </div>
+                            <p class="contacts__item_content p">
+                                г. Москва, ул. Обручева, 21 стр.4
+                            </p>                        
+                        </li>
+                        <li class="contacts__item">
+                            <div class="contacts__item_icon">
+                                <img src="img/icons/phone-icon.svg" alt="Контактный телефон">
+                            </div>
+                            <a href="tel:+79689099094" class="contacts__item_content p contacts__item_content-link">
+                                +7 (968) 909-909-4
+                            </a>                        
+                        </li>
+                        <li class="contacts__item">
+                            <div class="contacts__item_icon">
+                                <img src="img/icons/clock-icon.svg" alt="Режим работы">
+                            </div>
+                            <p class="contacts__item_content p">
+                                Режим работы<br>ежедневно с 9.00-20.00
+                            </p>                        
+                        </li>
+                    </ul>
+                    <ul class="contacts__social_list">
+                    <li class="contacts__social_item"><a href="#" class="contacts__social_link icon-moon">&#xe902;</a></li>
+                    <li class="contacts__social_item"><a href="#" class="contacts__social_link icon-moon">&#xe900;</a></li>
+                    <li class="contacts__social_item"><a href="#" class="contacts__social_link contacts__social_link-vk icon-moon">&#xe901;</a></li>
+                    </ul>
+                    <a href="#" class="route__btn route__btn_ya h3">Построить маршрут в Яндекс</a>
+                    <a href="#" class="route__btn route__btn_google h3">Построить маршрут в Google</a>
+                </div>                
+            </div>
+        </div>
+    </section>
 </main>
 <footer class="footer" id="footer">
-    
+    <div class="container-fluid">
+        <a href="#" class="footer__copyright small">
+            © 2020 Шумоизоляция автомобилей
+        </a>
+        <a href="/" class="footer__logo">
+            <img src="img/logo/footer-logo.svg" alt="Detailing">
+        </a>
+        <a href="https://apimedia.ru/" class="footer__dev small">
+            Api Media - Разработка и продвижение
+        </a>
+    </div>
 </footer>
 
 

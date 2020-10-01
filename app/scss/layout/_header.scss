@@ -1,3 +1,12 @@
+.icon-moon {
+  color: $light;
+  font-size: 30px;
+  transition: .35s;
+  &:hover {
+    color: $secondary;
+    transition: .35s;
+  }
+}
 .header {
   
   background: $dark_3;
@@ -57,21 +66,16 @@
       margin-right: 0;
     }
   }
+  &__social_link-vk {
+    font-size: 27px;
+  }
   &__social_link {
     &:hover .header__social_link~icon-moon {
       color: red;
     }
   }
 }
-.icon-moon {
-  color: $light;
-  font-size: 30px;
-  transition: .35s;
-  &:hover {
-    color: $secondary;
-    transition: .35s;
-  }
-}
+
 @media screen and (max-width: 1100.5px) {
   .header__wrap {
     display: none;

@@ -1,0 +1,47 @@
+.footer {
+  padding-bottom: 32px;
+  background: $dark;
+  > .container-fluid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__copyright {
+    color: $light;
+    transition: .35s;
+    &:hover {
+      color: $secondary;
+      transition: .35s;
+    }
+  }
+  &__logo {
+    max-width: 106px;
+    display: block;
+  }
+  &__dev {
+    color: $light;
+    transition: .35s;
+    &:hover {
+      color: $secondary;
+      transition: .35s;
+    }
+  }
+}
+@include tablet {
+  .footer {
+    > .container-fluid {
+      flex-direction: column;
+    }
+    &__logo {
+      order: 1;
+      margin-bottom: 16px;
+    }
+    &__dev {
+      order: 2;
+      margin-bottom: 16px;
+    }
+    &__copyright {
+      order: 3;
+    }
+  }
+}
