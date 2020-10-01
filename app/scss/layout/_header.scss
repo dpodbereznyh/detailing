@@ -2,6 +2,7 @@
   
   background: $dark_3;
   &__wrap {
+    display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 16px 0;
@@ -71,20 +72,36 @@
     transition: .35s;
   }
 }
+@media screen and (max-width: 1100.5px) {
+  .header__wrap {
+    display: none;
+  }
+}
 
 /*****Main Nav*****/
 
 .main-nav {
   background: $dark;
   border-radius: 0px;
+  padding: 16px 0;
 }
 .sm-clean {
   background: none;
 }
 .main-nav__logo {
   max-width: 143px;
+  display: none;
 }
-
+@media screen and (max-width: 1100.5px) {
+  .main-nav__logo {
+    display: block;
+  }
+}
+@media screen and (max-width: 400px) {
+  .main-nav__logo {
+    max-width: 73px;
+  }
+}
 .main-nav:after {
   clear: both;
   content: "\00a0";
@@ -169,7 +186,17 @@
   cursor: pointer;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
-
+@media screen and (max-width: 400px) {
+  .main-menu-btn {
+    margin: 10px;
+  }
+  .sm-clean {
+    margin-top: 16px;
+    a {
+      padding: 13px 20px 13px 0px;
+    }
+  }
+}
 
 /* hamburger icon */
 
@@ -255,4 +282,13 @@
   }
 }
 
-
+@media screen and (max-width: 1100.5px) {
+  .sm-clean {
+    li {
+      border-bottom: 1px solid $light;
+      &:last-child {
+        margin: 8px auto;
+      }
+    }
+  }
+}
