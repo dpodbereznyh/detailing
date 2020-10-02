@@ -361,3 +361,110 @@
     }
   }
 }
+
+/*****Main Form*****/
+.main-form {
+  background: $secondary;
+  // padding: 32px 0;
+  &__bg {
+    width: 100%;
+    height: 100%;
+    background: url(../img/main-form/main-form-bg.png) no-repeat center center/auto 100%;
+  }
+  &__form {
+    padding: 32px 0;
+  }
+  &__title {
+    color: $light;
+    margin-bottom: 32px;
+  }
+  &__input {
+    width: 100%;
+    height: 56px;
+    padding: 16px;
+    border: .5px solid $dark_5;
+    margin-bottom: 16px;
+    &::placeholder {
+      color: $dark_7;
+    }
+  }
+  &__select {
+    background: #fff url(../img/icons/form-arrow.svg) no-repeat calc(100% - 16px) center/20px 10px;
+    cursor: pointer;
+    color: $dark;
+  }
+  &__payment {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 56px;
+  }
+  &__payment_title {
+    color: $light;
+  }
+  &__payment_list {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__payment_label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    >.main-form__checkbox:checked + .main-form___checkbox-span {
+      background: $default;
+    }
+  }
+  &__payment_span {
+    color: $light;
+  }
+  &__checkbox {
+    position: absolute;
+    left: 0;
+    visibility: hidden;
+  }
+  &___checkbox-span {
+    display: block;
+    min-width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: $light;
+    border: 1px solid $dark;
+    margin-right: 8px;
+  }
+  &__btn {
+    padding: 16px 32px;
+    background: $dark;
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+    color: $light;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+    align-items: center;
+    margin-right: 32px;
+  }
+}
+@include phones {
+  .main-form__input {
+    margin-bottom: 32px;
+    height: 49px;
+  }
+  .main-form__payment {
+    height: auto;
+    margin-bottom: 32px;
+  }
+  .main-form__payment_title {
+    margin-bottom: 16px;
+  }
+  .main-form__payment_label {
+    margin-bottom: 8px;
+  }
+  .main-form__payment_list {
+    flex-direction: column;
+  }
+  .main-form__btn {
+    margin-bottom: 8px;
+  }
+}
