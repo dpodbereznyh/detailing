@@ -37,3 +37,11 @@
   content: "\e902";
   color: #fff;
 }
+.icon-Next:before {
+  content: "\e903";
+  color: #c3e400;
+}
+.icon-Prev:before {
+  content: "\e904";
+  color: #c3e400;
+}

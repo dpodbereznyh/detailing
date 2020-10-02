@@ -1,3 +1,21 @@
+//Reviews Slider
+var reviewsSlider = new Swiper ('.reviews__container', {
+    slideClass: 'reviews__item',
+    wrapperClass: 'reviews__wrapper',
+    slidesPerView: 1,
+    autoHeight: true,
+    navigation: {
+        nextEl: '.reviews__button-next',
+        prevEl: '.reviews__button-prev',
+    },
+    pagination: {
+        el: '.reviews__swiper-pagination',
+        type: 'bullets',
+        clickable: true,
+        bulletClass: 'reviews__swiper_bullet',
+        bulletActiveClass: 'reviews__swiper_bullet-active'
+    },
+});
 $(document).ready(function () {
 
     $(window).scroll(function() {

@@ -468,3 +468,85 @@
     margin-bottom: 8px;
   }
 }
+
+/*****Reviews*****/
+.reviews {
+  background: url(../img/reviews/reviews-bg.jpg) no-repeat center center/cover;
+  &__slider {
+    position: relative;
+    margin-bottom: 32px;
+  }
+  &__item_head {
+    padding: 16px 32px;
+    background: $default;
+    color: $light;
+  }
+  &__item_head_icon {
+    width: 22px;
+    height: 20px;
+    margin-bottom: 16px;
+  }
+  &__item_head_name {
+    margin-bottom: 16px;
+  }
+  &__item_body {
+    padding: 32px;
+    background: $light;
+  }
+  &__slider_button {
+    width: 10px;
+    height: 21px;
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    outline: none;
+    cursor: pointer;
+  }
+  &__button-prev {
+    left: 0;
+    transform: translate(-200%, -50%);
+  }
+  &__button-next {
+    right: 0;
+    transform: translate(200%, -50%);
+  }
+  &__btn {
+    background: $dark;
+    color: $light;
+    text-transform: uppercase;
+    transition: .35s;
+    padding: 16px 32px;
+    display: block;
+    width: fit-content;
+    margin: 0 auto 32px;
+    &:hover {
+      background: $dark_7;
+      color: $light;
+      transition: .35s;
+    }
+  }
+  &__swiper-pagination {
+    display: flex;
+    width: fit-content;
+    height: 10px;
+    margin: 0 auto;
+  }
+  &__swiper_bullet {
+    width: 10px;
+    height: 10px;
+    margin-right: 16px;
+    background: $light;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &__swiper_bullet-active {
+    background: $secondary;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .reviews__slider {
+    width: 98%;
+    margin: 0 auto 32px;
+  }
+}
