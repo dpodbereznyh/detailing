@@ -1,3 +1,41 @@
+//Works Slider
+var worksSlider = new Swiper ('.works__container', {
+    slideClass: 'works__item',
+    wrapperClass: 'works__wrapper',
+    slidesPerView: 4,
+    autoHeight: true,
+    spaceBetween: 32,
+    navigation: {
+        nextEl: '.works__button-next',
+        prevEl: '.works__button-prev',
+    },
+    pagination: {
+        el: '.works__swiper-pagination',
+        type: 'bullets',
+        clickable: true,
+        bulletClass: 'works__swiper_bullet',
+        bulletActiveClass: 'works__swiper_bullet-active',
+    },
+    breakpoints: {
+        320: {
+            slidesPerView: 1,
+            spaceBetween: 32
+        },
+        480: {
+            slidesPerView: 2,
+            spaceBetween: 32
+        },
+
+        820: {
+            slidesPerView: 3,
+            spaceBetween: 32
+        },
+        1200: {
+            slidesPerView: 4,
+            spaceBetween: 32
+        }
+    }
+});
 //Reviews Slider
 var reviewsSlider = new Swiper ('.reviews__container', {
     slideClass: 'reviews__item',
