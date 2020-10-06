@@ -114,7 +114,7 @@
                         </span>
                     </div>
                 </div>
-                <a href="#" class="main-screen__offer_stock_btn h3">
+                <a href="#" class="main-screen__offer_stock_btn h3 js-callback" data-fancybox data-src="#popup-form" data-title="Заказать комплексную шумоизоляцию" data-input="Заказ комплексной шумоизоляции">
                     Заказать
                 </a>
             </div>
@@ -200,7 +200,7 @@
             </div>
         </div>
     </div>
-    <div class="main-form">
+    <div class="main-form" id="main-form">
         <div class="container-fluid">
             <div class="row">
                 <div class="d-none d-lg-block col-lg-4">
@@ -213,22 +213,24 @@
                         </p>
                         <div class="row">
                             <div class="order-1 order-sm-1 col-sm-6">
-                                <input class="main-form__input" type="text" placeholder="Марка автомобиля">
+                                <input type="hidden" value="Заявка в блоке ОСТАВЬТЕ ЗАЯВКУ НА ШУМОИЗОЛЯЦИЮ ВАШЕГО АВТОМОБИЛЯ ПРЯМО СЕЙЧАС!" name="title">
+                                <input class="main-form__input" type="text" placeholder="Марка автомобиля" name="brand" required>
                             </div>
                             <div class="order-4 order-sm-2 col-sm-6">
-                                <input class="main-form__input" type="tel" placeholder="Телефон">
+                                <input class="main-form__input" type="tel" placeholder="Телефон" name="phone" required>
                             </div>
                             <div class="order-2 order-sm-3 col-sm-6">
-                                <input class="main-form__input" type="text" placeholder="Модель автомобиля">
+                                <input class="main-form__input" type="text" placeholder="Модель автомобиля" name="model" required>
                             </div>
                             <div class="order-5 order-sm-4 col-sm-6">
-                                <select class="main-form__input main-form__select p" name="" id="">
+                                <select class="main-form__input main-form__select p" name="option" id="">
                                     <option class="main-form__select_opt p">Вариант шумоизоляции</option>
+                                    <option>Пункт 1</option>
                                     <option>Пункт 2</option>
                                 </select>  
                             </div>
                             <div class="order-3 order-sm-5 col-sm-6">
-                                <input class="main-form__input" type="text" placeholder="Год выпуска">
+                                <input class="main-form__input" type="text" placeholder="Год выпуска" name="make" required>
                             </div>
                             <div class="order-6 col-sm-6">
                                 <div class="main-form__payment">
@@ -236,13 +238,14 @@
                                         Вариант оплаты
                                     </p>
                                     <div class="main-form__payment_list">
+                                        <input class="js-payment" type="hidden" value="Оплата сразу" name="payment">
                                         <label class="main-form__payment_label">
-                                            <input checked type="radio" name="payment" class="main-form__checkbox">
+                                            <input checked type="radio" name="pay" class="main-form__checkbox" value="Оплата сразу">
                                             <span class="main-form___checkbox-span"></span>
                                             <span class="main-form__payment_span p">Оплата сразу</span>
                                         </label>
                                         <label class="main-form__payment_label">
-                                            <input type="radio" name="payment" class="main-form__checkbox">
+                                            <input type="radio" name="pay" class="main-form__checkbox" value="Рассрочка (без переплаты)">
                                             <span class="main-form___checkbox-span"></span>
                                             <span class="main-form__payment_span p">Рассрочка (без переплаты)</span>
                                         </label>
@@ -413,7 +416,7 @@
                                 <p class="strong options__mobile options__mobile-secondary">
                                     Выбрали тариф? Жмите<br>“Заказать”!
                                 </p>
-                                <a href="#" class="options__btn h3">
+                                <a href="#" class="options__btn h3 js-callback" data-fancybox data-src="#popup-form" data-title='Тариф<br>"Комфорт"' data-input='Заказ обратного звонка с кнопки Заказать тариф "Комфорт"'>
                                     Заказать
                                 </a>
                             </li>
@@ -505,7 +508,7 @@
                                 <p class="strong options__mobile options__mobile-secondary">
                                     Выбрали тариф? Жмите<br>“Заказать”!
                                 </p>
-                                <a href="#" class="options__btn h3">
+                                <a href="#" class="options__btn h3 js-callback" data-fancybox data-src="#popup-form" data-title='Тариф<br>"Премиум"' data-input='Заказ обратного звонка с кнопки Заказать тариф "Премиум"'>
                                     Заказать
                                 </a>
                             </li>
@@ -597,7 +600,7 @@
                                 <p class="strong options__mobile options__mobile-secondary">
                                     Выбрали тариф? Жмите<br>“Заказать”!
                                 </p>
-                                <a href="#" class="options__btn h3">
+                                <a href="#" class="options__btn h3 js-callback" data-fancybox data-src="#popup-form" data-title='Тариф<br>"Экстрим"' data-input='Заказ обратного звонка с кнопки Заказать тариф "Экстрим"'>
                                     Заказать
                                 </a>
                             </li>
@@ -1150,7 +1153,7 @@
         </a>
     </div>
 </footer>
-<div class="">
+<div class="d-none">
     <form id="popup-form">
         <div class="popup-form">
             <h2 class="popup-form__title js-title"></h2>
@@ -1171,7 +1174,6 @@
         <div class="fancyalert-text">Спасибо за заявку,<br> в ближайшее время с Вами свяжутся!</div>
     </div>
 </div>
-
 
 <script src="js/scripts.min.js"></script>
 

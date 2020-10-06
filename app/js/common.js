@@ -153,6 +153,12 @@ $(document).ready(function () {
         $(".js-from").val(newinput);
     });
 
+    $(".main-form__form").submit(function(e){
+        e.preventDefault();        
+        payment = $('input[name=pay]:checked').val();
+        $(".js-payment").val(payment);
+        console.log(payment);
+    });
 
     $("#popup-form").submit(function(){
         $.ajax({
@@ -169,7 +175,8 @@ $(document).ready(function () {
         });
         return false;
     });
-    $(".footer__form").submit(function(){
+    
+    $(".main-form__form").submit(function(){
         $.ajax({
             type: "POST",
             url: "send.php",
@@ -178,103 +185,12 @@ $(document).ready(function () {
             $.fancybox.open({
                 src: '#fancyalert',
             });
-            $(".footer__form").trigger("reset");
+            $(".main-form__form").trigger("reset");
         });
         return false;
     });
-
-
-});
-// Customers Swiper Slider
-var customersSlider = new Swiper ('.customers__swiper-container', {
-    slideClass: 'customers__swiper-slide',
-    wrapperClass: 'customers__swiper-wrapper',
-    slidesPerView: 1,
-    autoHeight: true,
-    pagination: {
-        el: '.customers__swiper-pagination',
-        type: 'bullets',
-        clickable: true,
-        bulletClass: 'customers__swiper_bullet',
-        bulletActiveClass: 'customers__swiper_bullet-active'
-    },
-    navigation: {
-        nextEl: '.customers__slider_button-next',
-        prevEl: '.customers__slider_button-prev',
-    }
 });
 
-//Certificates
-var certificatesSlider = new Swiper ('.certificates__swiper-container', {
-    slideClass: 'certificates__swiper-slide',
-    wrapperClass: 'certificates__swiper-wrapper',
-    slidesPerView: 2,
-    spaceBetween: 16,
-    navigation: {
-        nextEl: '.certificates__slider_button-next',
-        prevEl: '.certificates__slider_button-prev',
-    }
-});
-
-new WOW().init();
-
-var ymID = 66898711;
-
-$(function() {
-    $('.js-callback').on("click", function() {
-        var sendPopup = $(this).attr('data-send');
-        // $(modal).find('input[name=target]').val(parent);
-        $(".popup-form__btn").attr("data-goal", sendPopup);
-        console.log(sendPopup);
-    });
-
-});
-
-var metrikaGoals = function () {
 
 
-    $('.js-onClickGoal').click(function () {
-
-        var goal = this.dataset.goal;
-        // var gtagGoal = this.dataset.gtagGoal;
-        // var thisGoal = getCookie(goal);
-        if (typeof thisGoal == "undefined") {
-            if ((typeof goal !== 'undefined' || goal != '') && typeof ym !== 'undefined') {
-                ym(ymID, 'reachGoal', goal);
-            }
-
-            var date = new Date(new Date().getTime() + 720 * 3600 * 1000);
-            document.cookie = goal + "=1; path=/; expires=" + date.toUTCString();
-        }
-
-
-    });
-
-    $('.js-validate-form').click(function () {
-        var form = $(this).closest('.js-form-default');
-        var validated = 1;
-
-        $(form).find('input[required]').each(function (indexInArray, valueOfElement) {
-            if ($(valueOfElement).val() == "") {
-                validated = 0;
-            }
-        });
-
-        if (validated == 0) {
-
-
-            var goal = this.dataset.goal;
-            // var gtagGoal = this.dataset.gtagGoal;
-
-            if ((typeof goal !== 'undefined' || goal != '') && typeof ym !== 'undefined') {
-                ym(ymID, 'reachGoal', goal);
-            }
-        }
-        console.log(form);
-    });
-};
-
-$(document).ready(function () {
-    metrikaGoals();
-});
 

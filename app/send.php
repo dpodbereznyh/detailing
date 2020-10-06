@@ -17,7 +17,7 @@ try {
 	$mail->Port = 465;
 	$mail->setFrom('no-reply@gridstudio.ru'); // Ваш Email
 	$mail->addAddress($recipient_mail1); // Email получателя
-	$mail->addAddress('id@apimedia.ru'); // Email получателя
+	$mail->addAddress('pdv@apimedia.ru'); // Email получателя
 }
 
 
@@ -27,19 +27,30 @@ catch (Exception $e) {
 
 
 
-$message = "<h1>APIMedia</h1>";
+$message = "<h1>DETAILING</h1>";
+if (isset($_POST['title'])) {
+	$message .= "Заголовок: ".$_POST['title']."<br />";
+}
 if (isset($_POST['name'])) {
 	$message .= "Имя: ".$_POST['name']."<br />";
 }
 if (isset($_POST['phone'])) {
 	$message .= "Телефон: ".$_POST['phone']."<br />";
 }
-if (isset($_POST['messege'])) {
-	$message .= "Сообщение: ".$_POST['messege']."<br />";
+if (isset($_POST['brand'])) {
+	$message .= "Марка автомобиля: ".$_POST['brand']."<br />";
 }
-
-if (isset($_POST['title'])) {
-	$message .= "Заголовок: ".$_POST['title']."<br />";
+if (isset($_POST['brand'])) {
+	$message .= "Модель автомобиля: ".$_POST['model']."<br />";
+}
+if (isset($_POST['option'])) {
+	$message .= "Вариант шумоизоляции: ".$_POST['option']."<br />";
+}
+if (isset($_POST['make'])) {
+	$message .= "Год выпуска: ".$_POST['make']."<br />";
+}
+if (isset($_POST['payment'])) {
+	$message .= "Вариант оплаты: ".$_POST['payment']."<br />";
 }
 
 
@@ -49,7 +60,7 @@ if (isset($_POST['title'])) {
 
 // Письмо
 $mail->isHTML(true);
-$mail->Subject = 'Заявка с сайта APIMedia'; // Заголовок письма
+$mail->Subject = 'Заявка с сайта Detailing'; // Заголовок письма
 $mail->Body = $message; // Текст письма
 $mail->CharSet = "utf-8";
 // Результат
