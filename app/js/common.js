@@ -1,3 +1,30 @@
+//Options Slider
+var optionsSlider = new Swiper ('.options__container', {
+    slideClass: 'options__slide',
+    wrapperClass: 'options__wrapper',
+    slidesPerView: 4,
+    navigation: {
+        nextEl: '.options__button-next',
+        prevEl: '.options__button-prev',
+    },
+    pagination: {
+        el: '.options__swiper-pagination',
+        type: 'bullets',
+        clickable: true,
+        bulletClass: 'options__swiper_bullet',
+        bulletActiveClass: 'options__swiper_bullet-active',
+    },
+    breakpoints: {
+        320: {
+            slidesPerView: 1,
+            spaceBetween: 32
+        },
+        747: {
+            slidesPerView: 4,
+            spaceBetween: 0
+        }
+    }
+});
 //Works Slider
 var worksSlider = new Swiper ('.works__container', {
     slideClass: 'works__item',
@@ -54,6 +81,7 @@ var reviewsSlider = new Swiper ('.reviews__container', {
         bulletActiveClass: 'reviews__swiper_bullet-active'
     },
 });
+
 $(document).ready(function () {
 
     $(window).scroll(function() {
@@ -122,7 +150,7 @@ $(document).ready(function () {
         var newtitle = $(this).attr("data-title");
         var newinput = $(this).attr("data-input");
         $(".js-title").html(newtitle);
-        $(".js-zakaz").val(newinput);
+        $(".js-from").val(newinput);
     });
 
 

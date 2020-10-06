@@ -45,3 +45,64 @@
     }
   }
 }
+/*****Popup Form*****/
+#popup-form {
+  width: 100%;
+  padding: 32px;
+  max-width: 400px;
+  background: $default;  
+}
+.popup-form {
+  &__title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: $dark;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+  }
+  &__subtitle {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  &__input {
+    padding: 16px;
+    width: 100%;
+    background: $light;
+    color: $dark;
+    border: .5px solid $dark;
+    margin-bottom: 16px;
+    &::placeholder {
+      color: $dark_7;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+  &__note {
+    text-align: center;
+    margin: 16px 0 32px;
+  }
+  &__btn {
+    padding: 16px 32px;
+    background: $secondary;
+    color: $light;
+    text-transform: uppercase;
+    text-align: center;
+    transition: .35s;
+    outline: none;
+    border: none;
+    margin: 0 auto;
+    width: fit-content;
+    display: block;
+    &:hover {
+      background: $secondary_d3;
+      color: $light;
+      transition: .35s;
+    }
+
+  }
+}

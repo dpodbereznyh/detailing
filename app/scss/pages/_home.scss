@@ -480,6 +480,276 @@
     margin-bottom: 8px;
   }
 }
+/*****Options*****/
+.options {
+  background: $dark_3 url(../img/options/options-bg.jpg) no-repeat left 100%;
+  &__slide {
+    width: 25%;
+  }
+  &__container {
+    margin-bottom: 32px;
+  }
+  &__column_desc_title {
+    height: 72px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $light;
+    text-transform: uppercase;
+    border: 0.5px solid $dark_7;
+  }
+  &__column_desc_item {
+    height: 72px;
+    width: 100%;
+    background: $light;
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    color: $dark;
+    border: 0.5px solid $dark_7;
+  }
+  &__column_desc_item-dark {
+    background: $dark_9;
+  }
+  &__column_desc_item-res {
+    height: 88px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    color: $secondary;
+  }
+  &__column_tariff_title {
+    background: $dark;
+    color: $light;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 72px;
+    text-transform: uppercase;
+  }
+  &__column_tariff_item {
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $light;
+    border: .5px solid $dark_7;
+  }
+  &__column_tariff_item-price {
+    background: $default;
+    color: $light;
+  }
+  &__column_tariff_item-default {
+    background: $default_l4;
+  }
+  &__column_tariff_item-dark {
+    background: $dark_9;
+  }
+  &__column_tariff_item-br {
+    border-right: none;
+  }
+  &__column_tariff_item-brl {
+    border-right: none;
+    border-left: none;
+  }
+  &__column_tariff_item-bl {
+    border-left: none;
+  }
+  &__column_tariff_btn {
+    height: 88px;
+    padding: 16px;
+    border: .5px solid $dark_7;
+  }
+  &__column_tariff_btn-light {
+    background: $light;
+  }
+  &__btn {
+    text-transform: uppercase;
+    color: $light;
+    padding: 16px 0;
+    max-width: 313px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $secondary;
+    transition: .35s;
+    &:hover {
+      background: $secondary_d3;
+      color: $light;
+      transition: .35s;
+    }
+  }
+  &__slider_button {
+    width: 10px;
+    height: 21px;
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    outline: none;
+    cursor: pointer;
+  }
+  &__button-prev {
+    left: 0;
+    transform: translate(-16px, -50%);
+  }
+  &__button-next {
+    right: 0;
+    transform: translate(16px, -50%);
+  }
+  &__swiper-pagination_wrap {
+    display: none;
+  }
+  &__swiper-pagination {
+    display: flex;
+    width: fit-content;
+    height: 10px;
+    margin: 0 auto;
+    position: relative;
+    outline: none;
+  }
+  &__swiper_bullet {
+    width: 10px;
+    height: 10px;
+    margin-right: 16px;
+    background: $light;
+    &:last-child {
+      margin-right: 0;
+    }
+    &:focus {
+      outline: none;
+    }
+    &:active {
+      outline: none;
+    }
+    &:hover {
+      outline: none;
+    }
+  }
+  &__swiper_bullet-active {
+    background: $secondary;
+    outline: none;
+  }
+  &__offer {
+    padding: 16px;
+    background: $default;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 32px;
+  }
+  &__offer_text {
+    width: 50%;
+  }
+  &__offer_title {
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  &__offer_description {
+    color: $light;
+  }
+  &__offer_order {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    justify-content: space-between;
+  }
+  &__offer_order_price {
+    max-width: 218px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  &__offer_order_btn {
+    padding: 16px 32px;
+    background: $dark;
+    color: $light;
+    text-transform: uppercase;
+    transition: .35s;
+    text-align: center;
+    &:hover {
+      background: $dark_7;
+      color: $light;
+      transition: .35s;
+    }
+  }
+  &__note {
+    color: $light;
+  }
+  &__note_link {
+    color: $light;
+    transition: .35s;
+    &:hover {
+      color: $secondary;
+      transition: .35s;
+    }
+  }
+  &__mobile {
+    display: none;
+  }
+}
+@media screen and (max-width: 1100.5px) {
+  .options__offer, .options__offer_order {
+    flex-direction: column;
+    align-items: center;
+  }
+  .options__offer_title, .options__offer_description, .options__note {
+    text-align: center;
+  }
+  .options__offer_description, .options__offer_order_price {
+    margin-bottom: 16px;
+  }
+}
+@media screen and (max-width: 747.5px) {
+  .options__slide {
+    width: 100%;
+  }
+  .options__swiper-pagination_wrap {
+    display: block;
+    position: relative;
+    padding: 0 32px;
+    width: fit-content;
+    margin: 0 auto 32px;
+  }
+  .options__slide_desc {
+    display: none;
+  }
+  .options__column_tariff_title, .options__column_tariff_item {
+    flex-direction: column;
+  }
+  .options__mobile-title {
+    text-transform: capitalize;
+  }
+  .options__mobile {
+    display: block;
+    margin-bottom: 4px;
+    text-align: center;
+  }
+  // .options__column_tariff_item-br {
+  //   border-right: 0.5px solid $dark_7;
+  // }
+  // .options__column_tariff_item-brl {
+  //   border-right: 0.5px solid $dark_7;
+  //   border-left: 0.5px solid $dark_7;
+  // }
+  // .options__column_tariff_item-bl {
+  //   border-left: 0.5px solid $dark_7;
+  // }
+  .options__column_tariff_btn {
+    height: auto;
+  }
+  .options__mobile-secondary {
+    color: $secondary;
+  }
+  .mobile-light {
+    background: $light;
+  }
+  .mobile-default {
+    background: $default_l4;
+  }
+}
 /*****Motivation*****/
 .motivation {
   background: $dark;

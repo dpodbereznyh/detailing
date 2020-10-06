@@ -84,7 +84,7 @@
                 <li><a href="#" class="strong yakor">Галерея</a></li>
                 <li><a href="#reviews" class="strong yakor">Отзывы</a></li>
                 <li><a href="#contacts" class="strong yakor">Контакты</a></li>  
-                <li><a href="#" class="h3">Консультация</a></li>
+                <li><a href="#" class="h3 js-callback" data-fancybox data-src="#popup-form" data-title="Консультация" data-input="Заказ обратного звонка с кнопки Консультация">Консультация</a></li>
             </ul>            
         </div>        
     </nav>
@@ -261,6 +261,383 @@
             </div>
         </div>
     </div>
+    <section class="section options">
+        <div class="container-fluid">
+            <h2 class="section__title h2">
+                Варианты шумоизоляции
+            </h2>
+            <div class="options__container swiper-container">
+                <div class="options__wrapper swiper-wrapper">
+                    <div class="options__slide swiper-slide options__slide_desc">
+                        <ul class="options__column_desc">
+                            <li class="options__column_desc_title">
+                                <p class="h4">
+                                    Тариф
+                                </p>
+                            </li>
+                            <li class="options__column_desc_item options__column_desc_item-dark">
+                                <p class="strong">
+                                    Цена
+                                </p>
+                            </li>
+                            <li class="options__column_desc_item">
+                                <p class="strong">
+                                    Снижение шума
+                                </p>
+                            </li>
+                            <li class="options__column_desc_item options__column_desc_item-dark">
+                                <p class="strong">
+                                    В стоимость тарифа входит
+                                </p>
+                            </li>
+                            <li class="options__column_desc_item">
+                                <p class="strong">
+                                    Проклеиваются
+                                </p>
+                            </li>
+                            <li class="options__column_desc_item">
+                                <p class="strong">
+                                    Толщина на полу
+                                </p>
+                            </li>
+                            <li class="options__column_desc_item options__column_desc_item-dark">
+                                <p class="strong">
+                                    Материал
+                                </p>
+                            </li>
+                            <li class="options__column_desc_item">
+                                <p class="strong">
+                                    Виброизолятор
+                                </p>
+                            </li>
+                            <li class="options__column_desc_item options__column_desc_item-dark">
+                                <p class="strong">
+                                    Шумопоглотитель
+                                </p>
+                            </li>
+                            <li class="options__column_desc_item">
+                                <p class="strong">
+                                    Мембрана
+                                </p>
+                            </li>
+                            <li class="options__column_desc_item options__column_desc_item-res">
+                                <p class="strong">
+                                    Выбрали тариф?<br>Жмите “Заказать”!
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="options__slide swiper-slide">
+                        <ul class="options__column_tariff">
+                            <li class="options__column_tariff_title">
+                                <p class="strong options__mobile options__mobile-title">
+                                    Тариф
+                                </p>
+                                <p class="h4">
+                                    Комфорт
+                                </p>
+                            </li>
+                            <li class="options__column_tariff_item options__column_tariff_item-price">
+                                <p class="strong options__mobile">
+                                    Цена
+                                </p>
+                                <p class="h3">
+                                    24 000 ₽*
+                                </p>
+                            </li>
+                            <li class="options__column_tariff_item options__column_tariff_item-default">
+                                <p class="strong options__mobile">
+                                    Снижение шума
+                                </p>
+                                <p class="p">
+                                    до 55%
+                                </p>
+                            </li>
+                            <li class="options__column_tariff_item options__column_tariff_item-dark options__column_tariff_item-br mobile-light">
+                                <p class="strong options__mobile">
+                                    В стиомость тарифа входит
+                                </p>
+                                <p class="p options__mobile">
+                                    Работа и материалы
+                                </p>
+                            </li>
+                            <li class="options__column_tariff_item options__column_tariff_item-br mobile-default">
+                                <p class="strong options__mobile">
+                                    Проклеиваются
+                                </p>
+                                <p class="p options__mobile">
+                                    Пол, арки в салоне, двери, капот
+                                </p>
+                            </li>
+                            <li class="options__column_tariff_item options__column_tariff_item-default mobile-light">
+                                <p class="strong options__mobile">
+                                    Толщина на полу
+                                </p>
+                                <p class="p">
+                                    11 мм
+                                </p>
+                            </li>
+                            <li class="options__column_tariff_item options__column_tariff_item-dark mobile-default">
+                                <p class="strong options__mobile">
+                                    Материал
+                                </p>
+                                <p class="p">
+                                    Comformat
+                                </p>
+                            </li>
+                            <li class="options__column_tariff_item options__column_tariff_item-default mobile-light">
+                                <p class="strong options__mobile">
+                                    Виброизолятор
+                                </p>
+                                <p class="p">
+                                    Silver 2-3 mm
+                                </p>
+                            </li>
+                            <li class="options__column_tariff_item options__column_tariff_item-dark mobile-default">
+                                <p class="strong options__mobile">
+                                    Шумопоглотитель
+                                </p>
+                                <p class="p">
+                                    V-Ton 4 mm
+                                </p>
+                            </li>
+                            <li class="options__column_tariff_item options__column_tariff_item-default mobile-light">
+                                <p class="strong options__mobile">
+                                    Мембрана
+                                </p>
+                                <p class="p">
+                                    Blocator 4 mm
+                                </p>
+                            </li>
+                            <li class="options__column_tariff_btn options__column_tariff_item-default">
+                                <p class="strong options__mobile options__mobile-secondary">
+                                    Выбрали тариф? Жмите<br>“Заказать”!
+                                </p>
+                                <a href="#" class="options__btn h3">
+                                    Заказать
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="options__slide swiper-slide">
+                        <ul class="options__column_tariff">
+                            <li class="options__column_tariff_title">
+                                <p class="strong options__mobile options__mobile-title">
+                                    Тариф
+                                </p>
+                                <p class="h4">
+                                    Премиум
+                                </p>
+                            </li>
+                            <li class="options__column_tariff_item options__column_tariff_item-price">
+                                <p class="strong options__mobile">
+                                    Цена
+                                </p>
+                                <p class="h3">
+                                    30 000 ₽*
+                                </p>
+                            </li>
+                            <li class="options__column_tariff_item options__column_tariff_item-default">
+                                <p class="strong options__mobile">
+                                    Снижение шума
+                                </p>
+                                <p class="p">
+                                    до 70%
+                                </p>
+                            </li>
+                            <li class="options__column_tariff_item options__column_tariff_item-dark options__column_tariff_item-brl mobile-light">
+                                <p class="strong options__mobile">
+                                    В стиомость тарифа входит
+                                </p>
+                                <p class="p">
+                                    Работа и материалы
+                                </p>
+                            </li>
+                            <li class="options__column_tariff_item options__column_tariff_item-brl mobile-default">
+                                <p class="strong options__mobile">
+                                    Проклеиваются
+                                </p>
+                                <p class="p">
+                                    Пол, арки в салоне, двери, капот
+                                </p>
+                            </li>
+                            <li class="options__column_tariff_item mobile-light">
+                                <p class="strong options__mobile">
+                                    Толщина на полу
+                                </p>
+                                <p class="p">
+                                    13 мм
+                                </p>
+                            </li>
+                            <li class="options__column_tariff_item options__column_tariff_item-dark mobile-default">
+                                <p class="strong options__mobile">
+                                    Материал
+                                </p>
+                                <p class="p">
+                                    Comformat Premium
+                                </p>
+                            </li>
+                            <li class="options__column_tariff_item mobile-light">
+                                <p class="strong options__mobile">
+                                    Виброизолятор
+                                </p>
+                                <p class="p">
+                                    Gold 3-4 mm
+                                </p>
+                            </li>
+                            <li class="options__column_tariff_item options__column_tariff_item-dark mobile-default">
+                                <p class="strong options__mobile">
+                                    Шумопоглотитель
+                                </p>
+                                <p class="p">
+                                    Blockshot 4 mm
+                                </p>
+                            </li>
+                            <li class="options__column_tariff_item mobile-light">
+                                <p class="strong options__mobile">
+                                    Мембрана
+                                </p>
+                                <p class="p">
+                                    Blockshot 4 mm
+                                </p>
+                            </li>    
+                            <li class="options__column_tariff_btn options__column_tariff_item-default">
+                                <p class="strong options__mobile options__mobile-secondary">
+                                    Выбрали тариф? Жмите<br>“Заказать”!
+                                </p>
+                                <a href="#" class="options__btn h3">
+                                    Заказать
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="options__slide swiper-slide">
+                        <ul class="options__column_tariff">
+                            <li class="options__column_tariff_title">
+                                <p class="strong options__mobile options__mobile-title">
+                                    Тариф
+                                </p>
+                                <p class="h4">
+                                    Экстрим
+                                </p>
+                            </li>
+                            <li class="options__column_tariff_item options__column_tariff_item-price">
+                                <p class="strong options__mobile">
+                                    Цена
+                                </p>
+                                <p class="h3">
+                                    36 000 ₽*
+                                </p>
+                            </li>
+                            <li class="options__column_tariff_item options__column_tariff_item-default">
+                                <p class="strong options__mobile">
+                                    Снижение шума
+                                </p>
+                                <p class="p">
+                                    до 85%
+                                </p>
+                            </li>
+                            <li class="options__column_tariff_item options__column_tariff_item-dark options__column_tariff_item-bl mobile-light">
+                                <p class="strong options__mobile">
+                                    В стиомость тарифа входит
+                                </p>
+                                <p class="p options__mobile">
+                                    Работа и материалы
+                                </p>
+                            </li>
+                            <li class="options__column_tariff_item options__column_tariff_item-bl mobile-default">
+                                <p class="strong options__mobile">
+                                    Проклеиваются
+                                </p>
+                                <p class="p options__mobile">
+                                    Пол, арки в салоне, двери, капот
+                                </p>
+                            </li>
+                            <li class="options__column_tariff_item mobile-light">
+                                <p class="strong options__mobile">
+                                    Толщина на полу
+                                </p>
+                                <p class="p">
+                                    16 мм
+                                </p>
+                            </li>
+                            <li class="options__column_tariff_item options__column_tariff_item-dark mobile-default">
+                                <p class="strong options__mobile">
+                                    Материал
+                                </p>
+                                <p class="p">
+                                    Comformat Exetreme
+                                </p>
+                            </li>
+                            <li class="options__column_tariff_item mobile-light">
+                                <p class="strong options__mobile">
+                                    Виброизолятор
+                                </p>
+                                <p class="p">
+                                    Extreme Pro 6 mm
+                                </p>
+                            </li>
+                            <li class="options__column_tariff_item options__column_tariff_item-dark mobile-default">
+                                <p class="strong options__mobile">
+                                    Шумопоглотитель
+                                </p>
+                                <p class="p">
+                                    Vision 6 mm
+                                </p>
+                            </li>
+                            <li class="options__column_tariff_item mobile-light">
+                                <p class="strong options__mobile">
+                                    Мембрана
+                                </p>
+                                <p class="p">
+                                    Blocator 4 mm
+                                </p>
+                            </li>    
+                            <li class="options__column_tariff_btn options__column_tariff_item-default">
+                                <p class="strong options__mobile options__mobile-secondary">
+                                    Выбрали тариф? Жмите<br>“Заказать”!
+                                </p>
+                                <a href="#" class="options__btn h3">
+                                    Заказать
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>                    
+            </div>
+            <div class="options__swiper-pagination_wrap">
+                <div class="swiper-pagination options__swiper-pagination"></div>
+                <div class="swiper-button-prev options__button-prev options__slider_button">
+                    <img src="img/icons/prev-arrow.svg" alt="">
+                </div>
+                <div class="swiper-button-next options__button-next options__slider_button">
+                    <img src="img/icons/next-arrow.svg" alt="">
+                </div>
+            </div>
+            <div class="options__offer">
+                <div class="options__offer_text">
+                    <h3 class="options__offer_title h3">
+                        Дополнительное предложение
+                    </h3>
+                    <p class="options__offer_description h6">
+                        для КОМПЛЕКСНОЙ ШУМОИОЛЯЦИИ Вашего автомобиля<br>закажите дополнительно шумоизоляцию<br>арок снаружи и подкрылок
+                    </p>
+                </div>
+                <div class="options__offer_order">
+                    <div class="options__offer_order_price">
+                        <s class="p">10 000 ₽</s>
+                        <span class="h1">8 000 ₽*</span>
+                    </div>
+                    <a href="#" class="options__offer_order_btn h3">
+                        Заказать дополнительно
+                    </a>
+                </div>
+            </div>
+            <p class="options__note small">
+                *Указаны базовые цены на автомобили В класса, более точную цену можно узнать по телефону <a href="tel:+79263230014" class="options__note_link small">+7 926 323 00 14</a>. Также можете оставить заявку на расчет стоимости в форме выше.
+            </p>
+        </div>
+    </section>
     <section class="section motivation">
         <div class="container-fluid">
             <h2 class="section__title h2">
@@ -507,7 +884,7 @@
                     <img src="img/icons/next-arrow.svg" alt="">
                 </div>
             </div>
-            <div class="works__swiper-pagination_wrap d-none">
+            <div class="works__swiper-pagination_wrap">
                 <div class="swiper-pagination works__swiper-pagination"></div>
                 <div class="swiper-button-prev works__button-prev works__slider_button d-block d-lg-none">
                     <img src="img/icons/prev-arrow.svg" alt="">
@@ -773,6 +1150,27 @@
         </a>
     </div>
 </footer>
+<div class="">
+    <form id="popup-form">
+        <div class="popup-form">
+            <h2 class="popup-form__title js-title"></h2>
+            <p class="popup-form__subtitle h4">
+                Мы перезвоним Вам
+            </p>
+            <input class="js-from" type="hidden" value="Всплывающая форма" name="title">
+            <input class="popup-form__input" type="text" placeholder="Имя" name="name" required="">
+            <input class="popup-form__input" type="tel" placeholder="Телефон" name="phone" required="">
+            <p class="popup-form__note small">
+                Нажимая на кнопку, вы принимаете<br>условия передачи данных
+            </p>
+            <button type="submit" class="popup-form__btn h3">Отправить</button>
+           
+        </div>
+    </form>
+    <div id="fancyalert" class="fancyalert">
+        <div class="fancyalert-text">Спасибо за заявку,<br> в ближайшее время с Вами свяжутся!</div>
+    </div>
+</div>
 
 
 <script src="js/scripts.min.js"></script>
