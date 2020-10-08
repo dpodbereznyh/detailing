@@ -65,7 +65,9 @@
             </ul>
         </div>               
     </div>
-    <nav class="main-nav">
+</header>
+<main class="main">
+    <nav class="main-nav sticky-top">
         <div class="container-fluid">
             <!-- Mobile menu toggle button (hamburger/x icon) -->
             <input id="main-menu-state" type="checkbox" />
@@ -77,29 +79,32 @@
                 <img src="img/header/header-logo.svg" alt="DETAILING">
             </div>        
             <ul id="main-menu" class="sm sm-clean">
-                <li><a href="#" class="strong yakor">Видео</a></li>
-                <li><a href="#" class="strong yakor">О нас</a></li>
-                <li><a href="#" class="strong yakor">Преимущества</a></li>
-                <li><a href="#" class="strong yakor">Цены</a></li>
-                <li><a href="#" class="strong yakor">Галерея</a></li>
+                <li><a href="#" class="strong" data-fancybox data-src="#popup-video">Видео</a></li>
+                <li><a href="#advantages" class="strong yakor">О нас</a></li>
+                <li><a href="#motivation" class="strong yakor">Преимущества</a></li>
+                <li><a href="#options" class="strong yakor">Цены</a></li>
+                <li><a href="#works" class="strong yakor">Галерея</a></li>
                 <li><a href="#reviews" class="strong yakor">Отзывы</a></li>
                 <li><a href="#contacts" class="strong yakor">Контакты</a></li>  
                 <li><a href="#" class="h3 js-callback" data-fancybox data-src="#popup-form" data-title="Консультация" data-input="Заказ обратного звонка с кнопки Консультация">Консультация</a></li>
             </ul>            
         </div>        
     </nav>
-</header>
-<main class="main">
     <section class="main-screen">
-        <video src="img/main-screen/Шумоизоляция BMW X2.mp4" class="main-screen__video"></video>
-        <div class="main-screen__video_bg"></div>
+        <div class="main-screen__video_bg">
+            <video src="img/main-screen/Шумоизоляция BMW X2.mp4" class="" autoplay loop="loop" muted="muted"></video>
+            <div class="main-screen__video-overlay-bg"></div>
+        </div>
         <div class="main-screen__offer">
-            <h1 class="main-screen__offer_title">
-                Шумоизоляция вашего<br>автомобиля в рассрочку
-            </h1>
-            <span class="main-screen__offer_subtitle">
-                под 0% годовых
-            </span>
+            <div class="main-screen__offer_text">
+                <h1 class="main-screen__offer_title">
+                    Шумоизоляция вашего<br>автомобиля в <span class="main-screen__offer_title-span">рассрочку</span>
+                </h1>
+                <span class="main-screen__offer_subtitle">
+                    под 0% годовых
+                </span>
+            </div>
+            
             <div class="main-screen__offer_stock">
                 <div class="main-screen__offer_stock_wrap">
                     <div class="main-screen__offer_stock_image">
@@ -120,9 +125,9 @@
             </div>
         </div>        
     </section>
-    <section class="section advantages">
+    <section class="section advantages" id="advantages">
         <div class="container-fluid">
-            <h2 class="section__title h2">
+            <h2 class="section__title h2 advantages__title">
                 Почему стоит обратиться к нам?
             </h2>
             <ul class="advantages__list">
@@ -136,7 +141,7 @@
                 </li>
                 <li class="advantages__item advantages__item-dark">
                     <div class="advantages__item_image">
-                        <div class=""advantages__item_image_icon">
+                        <div class="advantages__item_image_icon">
                             <img src="img/advantages/volume.svg" alt="">
                         </div>
                         <p class="advantages__item_image_text h3">
@@ -144,7 +149,7 @@
                         </p>
                     </div> 
                     <div class="advantages__item_image">
-                        <div class=""advantages__item_image_icon">
+                        <div class="advantages__item_image_icon">
                             <img src="img/advantages/time.svg" alt="">
                         </div>
                         <p class="advantages__item_image_text h3">
@@ -154,7 +159,7 @@
                 </li>
                 <li class="advantages__item advantages__item-dark order-4 oreder-md-3">
                     <div class="advantages__item_image">
-                        <div class=""advantages__item_image_icon">
+                        <div class="advantages__item_image_icon">
                             <img src="img/advantages/WhatsApp-report.svg" alt="">
                         </div>
                         <p class="advantages__item_image_text h3">
@@ -162,7 +167,7 @@
                         </p>
                     </div> 
                     <div class="advantages__item_image">
-                        <div class=""advantages__item_image_icon">
+                        <div class="advantages__item_image_icon">
                             <img src="img/advantages/lock.svg" alt="">
                         </div>
                         <p class="advantages__item_image_text advantages__item_image_text-lock h3">
@@ -182,22 +187,25 @@
         </div>
     </section>
     <div class="car-brands">
-        <a href="#" class="car-brands__btn h3">
+        <p href="#" class="car-brands__btn h3">
             Работаем со всеми марками авто
-        </a>
+        </p>
     </div>
     <div class="warranty">
         <div class="container-fluid">
-            <div class="row">
-                <div class="d-none d-lg-block col-lg-7">
-                    <div class="warranty__image"></div>
+            <div class="warranty__wrap">
+                <div class="warranty__image">
+                    <img src="img/warranty/warranty.png" alt="">
                 </div>
-                <div class="col-lg-5">
+                <div class="warranty__description_wrap">
+                    <div class="warranty__description_icon">
+                        <img src="img/icons/attantion.svg" alt="">
+                    </div>
                     <p class="warranty__description h1">
                         ПРИ ВЫПОЛНЕНИИ РАБОТ - НЕ ОСТАВЛЯЕМ СЛЕДОВ РАЗБОРА САЛОНА - <span>ВАШ АВТОМОБИЛЬ НЕ СЛЕТАЕТ С ГАРАНТИИ</span>
                     </p>
-                </div>
-            </div>
+                </div> 
+            </div> 
         </div>
     </div>
     <div class="main-form" id="main-form">
@@ -209,7 +217,7 @@
                 <div class="col-12 col-lg-8">
                     <form class="main-form__form">
                         <p class="main-form__title h2">
-                            ОСТАВЬТЕ ЗАЯВКУ НА ШУМОИЗОЛЯЦИЮ<br>ВАШЕГО АВТОМОБИЛЯ ПРЯМО СЕЙЧАС!
+                            <span>ОСТАВЬТЕ ЗАЯВКУ</span> НА ШУМОИЗОЛЯЦИЮ<br>ВАШЕГО АВТОМОБИЛЯ ПРЯМО СЕЙЧАС!
                         </p>
                         <div class="row">
                             <div class="order-1 order-sm-1 col-sm-6">
@@ -254,7 +262,7 @@
                             </div>
                             <div class="order-7 col-lg-12 d-sm-flex align-items-center">
                                 <input class="main-form__btn h3" type="submit" placeholder="Отправить">
-                                <p class="main-form__accept">
+                                <p class="main-form__accept p">
                                     Нажимая на кнопку, вы принимаете<br>условия передачи данных
                                 </p>
                             </div>
@@ -264,7 +272,7 @@
             </div>
         </div>
     </div>
-    <section class="section options">
+    <section class="section options" id="options">
         <div class="container-fluid">
             <h2 class="section__title h2">
                 Варианты шумоизоляции
@@ -623,7 +631,7 @@
                         Дополнительное предложение
                     </h3>
                     <p class="options__offer_description h6">
-                        для КОМПЛЕКСНОЙ ШУМОИОЛЯЦИИ Вашего автомобиля<br>закажите дополнительно шумоизоляцию<br>арок снаружи и подкрылок
+                        для КОМПЛЕКСНОЙ ШУМОИЗОЛЯЦИИ Вашего автомобиля<br>закажите дополнительно шумоизоляцию<br>арок снаружи и подкрылок
                     </p>
                 </div>
                 <div class="options__offer_order">
@@ -631,7 +639,7 @@
                         <s class="p">10 000 ₽</s>
                         <span class="h1">8 000 ₽*</span>
                     </div>
-                    <a href="#" class="options__offer_order_btn h3">
+                    <a href="#" class="options__offer_order_btn h3 js-callback" data-fancybox data-src="#popup-form" data-title='Заказать<br>дополнительно' data-input='Заказ обратного звонка с кнопки "Заказать дополнительно"'>
                         Заказать дополнительно
                     </a>
                 </div>
@@ -641,7 +649,7 @@
             </p>
         </div>
     </section>
-    <section class="section motivation">
+    <section class="section motivation" id="motivation">
         <div class="container-fluid">
             <h2 class="section__title h2">
                 4 ПРИЧИНЫ СДЕЛАТЬ ШУМОИЗОЛЯЦИЮ АВТОМОБИЛЯ
@@ -694,7 +702,7 @@
             </div>
         </div>
     </section>
-    <section class="section works">
+    <section class="section works" id="works">
         <div class="container-fluid">
             <div class="section__title h2">
                 Выполненные работы
@@ -709,7 +717,7 @@
                             <h4 class="works__slide_title h4">
                                 Chevrolette Tahoe
                             </h4>
-                            <a href="#" class="works__slide_btn h3">
+                            <a href="#" class="works__slide_btn h3" data-fancybox data-src="#works-gallary1">
                                 Подробнее
                             </a>
                         </div>
@@ -887,27 +895,32 @@
                     <img src="img/icons/next-arrow.svg" alt="">
                 </div>
             </div>
-            <div class="works__swiper-pagination_wrap">
-                <div class="swiper-pagination works__swiper-pagination"></div>
+            <div class="works__swiper-pagination_wrap">   
+                <div class="works__swiper-pagination"></div>       
                 <div class="swiper-button-prev works__button-prev works__slider_button d-block d-lg-none">
                     <img src="img/icons/prev-arrow.svg" alt="">
                 </div>
                 <div class="swiper-button-next works__button-next works__slider_button d-block d-lg-none">
                     <img src="img/icons/next-arrow.svg" alt="">
                 </div>
-            </div>
-            
+            </div>            
         </div>
     </section>
     <div class="present">
         <div class="container-fluid">
-            <div class="row">
-                <div class="offset-0 offset-md-5 col-md-7 offset-lg-8 col-lg-4">
-                    <h2 class="present__title h1">
-                        При заказе комплексной шумоизоляции –<br><span>антискрип салона В ПОДАРОК!</span>
-                    </h2>
+            <div class="present__wrap">
+                <div class="present__image">
+                    <img src="img/present/present-bg.png" alt="">
                 </div>
-            </div>
+                <div class="present__description_wrap">
+                    <div class="present__description_icon">
+                        <img src="img/icons/attantion.svg" alt="">
+                    </div>
+                    <p class="present__description h1">
+                        При заказе комплексной шумоизоляции –<br><span>антискрип салона В ПОДАРОК!</span>
+                    </p>
+                </div> 
+            </div> 
         </div>
     </div>
     <div class="proc">
@@ -926,6 +939,11 @@
                         </p>
                     </div>
                 </div>
+                <div class="d-block d-md-none">
+                    <div class="proc__image">
+                        <img src="img/proc/proc-bg.png" alt="">
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -941,8 +959,8 @@
                             Мы перезвоним Вам
                         </p>
                         <div class="callback__form_wrap">
-                            <input type="text" placeholder="Имя" class="callback__form_input">
-                            <input type="tel" placeholder="Телефон" class="callback__form_input">
+                            <input type="text" name="name" placeholder="Имя" class="callback__form_input" required>
+                            <input type="tel" name="phone" placeholder="Телефон" class="callback__form_input" required>
                             <input type="submit" class="callback__form_input callback__form_btn">
                         </div>
                         <label class="callback__form_label">
@@ -1079,17 +1097,28 @@
                         </div>
                     </div>
                 </div>
-                <div class="swiper-button-prev reviews__button-prev reviews__slider_button">
+                <div class="swiper-button-prev reviews__button-prev reviews__slider_button d-none d-lg-block">
                     <img src="img/icons/prev-arrow.svg" alt="">
                 </div>
-                <div class="swiper-button-next reviews__button-next reviews__slider_button">
+                <div class="swiper-button-next reviews__button-next reviews__slider_button d-none d-lg-block">
                     <img src="img/icons/next-arrow.svg" alt="">
                 </div>
             </div>
-            <a href="#" class="reviews__btn">
-                Оставить отзыв
-            </a>
-            <div class="swiper-pagination reviews__swiper-pagination"></div>
+            <div class="reviews__mobile_nav">
+                <a href="#" class="reviews__btn">
+                    Оставить отзыв
+                </a>
+                <div class="reviews__swiper-pagination_wrap">
+                    <div class="swiper-pagination reviews__swiper-pagination"></div>
+                    <div class="swiper-button-prev reviews__button-prev reviews__slider_button d-block d-lg-none">
+                        <img src="img/icons/prev-arrow.svg" alt="">
+                    </div>
+                    <div class="swiper-button-next reviews__button-next reviews__slider_button d-block d-lg-none">
+                        <img src="img/icons/next-arrow.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            
         </div>
     </section>
     <section class="section contacts" id="contacts">
@@ -1133,8 +1162,8 @@
                     <li class="contacts__social_item"><a href="https://www.instagram.com/detailing_na_leninskom" target="_blank" class="contacts__social_link icon-moon">&#xe900;</a></li>
                     <li class="contacts__social_item"><a href="https://vk.com/detailing_na_leninskom" target="_blank" class="contacts__social_link contacts__social_link-vk icon-moon">&#xe901;</a></li>
                     </ul>
-                    <a href="#" class="route__btn route__btn_ya h3">Построить маршрут в Яндекс</a>
-                    <a href="#" class="route__btn route__btn_google h3">Построить маршрут в Google</a>
+                    <a href="#" class="route__btn route__btn_ya h3" data-fancybox data-src="#yandex-map">Построить маршрут в Яндекс</a>
+                    <a href="#" class="route__btn route__btn_google h3" data-fancybox data-src="#google-map">Построить маршрут в Google</a>
                 </div>                
             </div>
         </div>
@@ -1174,9 +1203,37 @@
         <div class="fancyalert-text">Спасибо за заявку,<br> в ближайшее время с Вами свяжутся!</div>
     </div>
 </div>
-
+<div class="d-none">
+    <div id="yandex-map" class="popup__map">
+        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A1c757e1fc6635eb1a9107a83d913f67c73b0834da8a009cd6c068c3a12fe23de&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
+    </div>
+</div>
+<div class="d-none">
+    <div id="google-map" class="popup__map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2250.780265280907!2d37.51962211548461!3d55.658030706765395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54d1799b58c39%3A0x9bcfc4048db15f5c!2z0YPQuy4g0J7QsdGA0YPRh9C10LLQsCwgMjEg0YHRgtGA0L7QtdC90LjQtSA0LCDQnNC-0YHQutCy0LAsIDExOTQyMQ!5e0!3m2!1sru!2sru!4v1602048951526!5m2!1sru!2sru" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </div>
+</div>
+<div class="d-none">
+    <div id="popup-video" class="popup__video">
+        <div class="">
+            <video src="img/main-screen/Шумоизоляция BMW X2.mp4" class="popup__video_video"></video>
+        </div>
+    </div>
+</div>
+<!-- <div class="d-none">
+    <div id="works-gallary1" class="works__gallary">
+        <div class="works__gallary_item" data-fancybox="works-gallary">
+            <img src="img/works/Chevrolette Tahoe/autoshumka_118484505_299503078013422_5682725622842144283_n.jpg" alt="">
+        </div>
+        <div class="works__gallary_item" data-fancybox="works-gallary">
+            <img src="img/works/Chevrolette Tahoe/autoshumka_118489874_2657493394489737_3343815613702007361_n.jpg" alt="">
+        </div>
+        <div class="works__gallary_item" >
+            <img  src="img/works/Chevrolette Tahoe/autoshumka_118489874_2657493394489737_3343815613702007361_n.jpg" alt="">
+        </div>
+    </div>
+</div> -->
 <script src="js/scripts.min.js"></script>
-
 </body>
 </html>
 

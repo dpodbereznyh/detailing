@@ -106,3 +106,29 @@
 
   }
 }
+.popup__map {
+  padding: 30px;
+  width: 100%;
+  height: 100%;
+}
+@include tablet {
+  .popup__map {
+    padding: 15px;
+  }
+}
+.popup__video {
+  padding: 30px;
+  width: 100%;
+  height: auto;
+  &_video {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+@include tablet {
+  .popup__map {
+    padding: 15px;
+  }
+}

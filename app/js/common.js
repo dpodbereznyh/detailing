@@ -27,10 +27,11 @@ var optionsSlider = new Swiper ('.options__container', {
 });
 //Works Slider
 var worksSlider = new Swiper ('.works__container', {
+    dynamicBullets: true,
+    dynamicMainBullets: 3,
     slideClass: 'works__item',
     wrapperClass: 'works__wrapper',
     slidesPerView: 4,
-    autoHeight: true,
     spaceBetween: 32,
     navigation: {
         nextEl: '.works__button-next',
@@ -42,6 +43,9 @@ var worksSlider = new Swiper ('.works__container', {
         clickable: true,
         bulletClass: 'works__swiper_bullet',
         bulletActiveClass: 'works__swiper_bullet-active',
+        dynamicBullets: true,
+        dynamicMainBullets: 5,
+        hideOnClick: false
     },
     breakpoints: {
         320: {
@@ -186,6 +190,20 @@ $(document).ready(function () {
                 src: '#fancyalert',
             });
             $(".main-form__form").trigger("reset");
+        });
+        return false;
+    });
+
+    $(".callback__form").submit(function(){
+        $.ajax({
+            type: "POST",
+            url: "send.php",
+            data: $(this).serialize()
+        }).done(function() {
+            $.fancybox.open({
+                src: '#fancyalert',
+            });
+            $("юcallback__form").trigger("reset");
         });
         return false;
     });

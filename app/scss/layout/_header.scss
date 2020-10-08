@@ -7,8 +7,7 @@
     transition: .35s;
   }
 }
-.header {
-  
+.header {  
   background: $dark_3;
   &__wrap {
     display: flex;
@@ -96,6 +95,9 @@
   display: none;
 }
 @media screen and (max-width: 1100.5px) {
+  .main-nav {
+    background: $dark_3;
+  }
   .main-nav__logo {
     display: block;
   }
@@ -298,3 +300,9 @@
     }
   }
 }
+.sticky-top {
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+}
+
