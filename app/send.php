@@ -6,6 +6,9 @@ require (__DIR__.'/php_mailer/Exception.php');
 require (__DIR__.'/php_mailer/PHPMailer.php');
 require (__DIR__.'/php_mailer/SMTP.php');
 
+// $recipient_mail1 = "pdv@apimedia.ru";
+
+
 $mail = new PHPMailer;
 try {
 	$mail->isSMTP();
@@ -17,7 +20,8 @@ try {
 	$mail->Port = 465;
 	$mail->setFrom('no-reply@gridstudio.ru'); // Ваш Email
 	$mail->addAddress($recipient_mail1); // Email получателя
-	$mail->addAddress('pdv@apimedia.ru'); // Email получателя
+	$mail->addAddress('detailing.na.leninskom@yandex.ru'); // Email получателя
+	
 }
 
 
@@ -51,6 +55,9 @@ if (isset($_POST['make'])) {
 }
 if (isset($_POST['payment'])) {
 	$message .= "Вариант оплаты: ".$_POST['payment']."<br />";
+}
+if (isset($_POST['messege'])) {
+	$message .= "Оставлен отзыв: ".$_POST['messege']."<br />";
 }
 
 

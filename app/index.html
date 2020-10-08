@@ -59,7 +59,7 @@
                 </li>
             </ul>
             <ul class="header__social_list">
-                <li class="header__social_item"><a href="tel:+79689099094" class="header__social_link icon-moon">&#xe902;</a></li>
+                <li class="header__social_item"><a href="https://wa.me/tel:+79689099094" class="header__social_link icon-moon">&#xe902;</a></li>
                 <li class="header__social_item"><a href="https://www.instagram.com/detailing_na_leninskom" target="_blank" class="header__social_link icon-moon">&#xe900;</a></li>
                 <li class="header__social_item"><a href="https://vk.com/detailing_na_leninskom" target="_blank" class="header__social_link header__social_link-vk icon-moon">&#xe901;</a></li>
             </ul>
@@ -86,7 +86,13 @@
                 <li><a href="#works" class="strong yakor">Галерея</a></li>
                 <li><a href="#reviews" class="strong yakor">Отзывы</a></li>
                 <li><a href="#contacts" class="strong yakor">Контакты</a></li>  
+                <ul class="header__social_list-mobile">
+                    <li class="header__social_item-mobile"><a href="https://wa.me/tel:+79689099094" class="header__social_link-mobile icon-moon">&#xe902;</a></li>
+                    <li class="header__social_item-mobile"><a href="https://www.instagram.com/detailing_na_leninskom" target="_blank" class="header__social_link-mobile icon-moon">&#xe900;</a></li>
+                    <li class="header__social_item-mobile"><a href="https://vk.com/detailing_na_leninskom" target="_blank" class="header__social_link-mobile header__social_link-vk icon-moon">&#xe901;</a></li>
+                </ul>
                 <li><a href="#" class="h3 js-callback" data-fancybox data-src="#popup-form" data-title="Консультация" data-input="Заказ обратного звонка с кнопки Консультация">Консультация</a></li>
+                
             </ul>            
         </div>        
     </nav>
@@ -225,7 +231,7 @@
                                 <input class="main-form__input" type="text" placeholder="Марка автомобиля" name="brand" required>
                             </div>
                             <div class="order-4 order-sm-2 col-sm-6">
-                                <input class="main-form__input" type="tel" placeholder="Телефон" name="phone" required>
+                                <input class="main-form__input" pattern="^[ 0-9]+$" type="tel" placeholder="Телефон" name="phone" required>
                             </div>
                             <div class="order-2 order-sm-3 col-sm-6">
                                 <input class="main-form__input" type="text" placeholder="Модель автомобиля" name="model" required>
@@ -1115,7 +1121,7 @@
                         </p>
                         <div class="callback__form_wrap">
                             <input type="text" name="name" placeholder="Имя" class="callback__form_input" required>
-                            <input type="tel" name="phone" placeholder="Телефон" class="callback__form_input" required>
+                            <input type="tel" name="phone" pattern="^[ 0-9]+$" placeholder="Телефон" class="callback__form_input" required>
                             <input type="submit" class="callback__form_input callback__form_btn">
                         </div>
                         <label class="callback__form_label">
@@ -1148,7 +1154,7 @@
                                     <img src="img/reviews/quotes.svg" alt="">
                                 </div>
                                 <p class="reviews__item_head_name strong">
-                                    Имя Фамилия
+                                    Евгений
                                 </p>
                                 <p class="reviews__item_head_date small">
                                     22.09.2020
@@ -1166,7 +1172,7 @@
                                     <img src="img/reviews/quotes.svg" alt="">
                                 </div>
                                 <p class="reviews__item_head_name strong">
-                                    Имя Фамилия
+                                    Александр
                                 </p>
                                 <p class="reviews__item_head_date small">
                                     22.09.2020
@@ -1184,7 +1190,7 @@
                                     <img src="img/reviews/quotes.svg" alt="">
                                 </div>
                                 <p class="reviews__item_head_name strong">
-                                    Имя Фамилия
+                                    Владимир
                                 </p>
                                 <p class="reviews__item_head_date small">
                                     22.09.2020
@@ -1202,7 +1208,7 @@
                                     <img src="img/reviews/quotes.svg" alt="">
                                 </div>
                                 <p class="reviews__item_head_name strong">
-                                    Имя Фамилия
+                                    Мария
                                 </p>
                                 <p class="reviews__item_head_date small">
                                     22.09.2020
@@ -1220,7 +1226,7 @@
                                     <img src="img/reviews/quotes.svg" alt="">
                                 </div>
                                 <p class="reviews__item_head_name strong">
-                                    Имя Фамилия
+                                    Елена
                                 </p>
                                 <p class="reviews__item_head_date small">
                                     22.09.2020
@@ -1238,7 +1244,7 @@
                                     <img src="img/reviews/quotes.svg" alt="">
                                 </div>
                                 <p class="reviews__item_head_name strong">
-                                    Имя Фамилия
+                                    Алексей
                                 </p>
                                 <p class="reviews__item_head_date small">
                                     22.09.2020
@@ -1260,7 +1266,7 @@
                 </div>
             </div>
             <div class="reviews__mobile_nav">
-                <a href="#" class="reviews__btn">
+                <a href="#" class="reviews__btn js-callback" data-fancybox data-src="#popup-reviews" data-title="Оставить отзыв" data-input="Сообщение с кнопки Оставить отзыв">
                     Оставить отзыв
                 </a>
                 <div class="reviews__swiper-pagination_wrap">
@@ -1299,7 +1305,7 @@
                             <div class="contacts__item_icon">
                                 <img src="img/icons/phone-icon.svg" alt="Контактный телефон">
                             </div>
-                            <a href="tel:+79689099094" class="contacts__item_content p contacts__item_content-link">
+                            <a href="tel:+79689099094"  class="contacts__item_content p contacts__item_content-link">
                                 +7 (968) 909-909-4
                             </a>                        
                         </li>
@@ -1313,12 +1319,14 @@
                         </li>
                     </ul>
                     <ul class="contacts__social_list">
-                    <li class="contacts__social_item"><a href="tel:+79689099094" class="contacts__social_link icon-moon">&#xe902;</a></li>
+                    <li class="contacts__social_item"><a href="https://wa.me/+79689099094" class="contacts__social_link icon-moon">&#xe902;</a></li>
                     <li class="contacts__social_item"><a href="https://www.instagram.com/detailing_na_leninskom" target="_blank" class="contacts__social_link icon-moon">&#xe900;</a></li>
                     <li class="contacts__social_item"><a href="https://vk.com/detailing_na_leninskom" target="_blank" class="contacts__social_link contacts__social_link-vk icon-moon">&#xe901;</a></li>
                     </ul>
-                    <a href="#" class="route__btn route__btn_ya h3" data-fancybox data-src="#yandex-map">Построить маршрут в Яндекс</a>
-                    <a href="#" class="route__btn route__btn_google h3" data-fancybox data-src="#google-map">Построить маршрут в Google</a>
+                    <!-- <a href="#" class="route__btn route__btn_ya h3" data-fancybox data-src="#yandex-map">Построить маршрут в Яндекс</a>
+                    <a href="#" class="route__btn route__btn_google h3" data-fancybox data-src="#google-map">Построить маршрут в Google</a> -->
+                    <a target="_blank" href="https://yandex.ru/maps/?ll=37.868345%2C55.642933&mode=routes&rtext=~55.657870%2C37.521695&rtt=auto&ruri=~ymapsbm1%3A%2F%2Fgeo%3Fll%3D37.522%252C55.658%26spn%3D0.001%252C0.001%26text%3D%25D0%25A0%25D0%25BE%25D1%2581%25D1%2581%25D0%25B8%25D1%258F%252C%2520%25D0%259C%25D0%25BE%25D1%2581%25D0%25BA%25D0%25B2%25D0%25B0%252C%2520%25D1%2583%25D0%25BB%25D0%25B8%25D1%2586%25D0%25B0%2520%25D0%259E%25D0%25B1%25D1%2580%25D1%2583%25D1%2587%25D0%25B5%25D0%25B2%25D0%25B0%252C%252021%25D1%25814&source=wizroute&utm_medium=maps-desktop&z=8.88" class="route__btn route__btn_ya h3">Построить маршрут в Яндекс</a>
+                    <a target="_blank" href="https://www.google.ru/maps/dir//%D1%83%D0%BB.+%D0%9E%D0%B1%D1%80%D1%83%D1%87%D0%B5%D0%B2%D0%B0,+21+%D1%81%D1%82%D1%80%D0%BE%D0%B5%D0%BD%D0%B8%D0%B5+4,+%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0,+119421/@56.0621355,37.5581979,9z/data=!4m9!4m8!1m0!1m5!1m1!1s0x46b54d1799b58c39:0x9bcfc4048db15f5c!2m2!1d37.5218108!2d55.6580277!3e0" class="route__btn route__btn_google h3">Построить маршрут в Google</a>
                 </div>                
             </div>
         </div>
@@ -1346,7 +1354,7 @@
             </p>
             <input class="js-from" type="hidden" value="Всплывающая форма" name="title">
             <input class="popup-form__input" type="text" placeholder="Имя" name="name" required="">
-            <input class="popup-form__input" type="tel" placeholder="Телефон" name="phone" required="">
+            <input class="popup-form__input" pattern="^[ 0-9]+$" type="tel" placeholder="Телефон" name="phone" required="">
             <p class="popup-form__note small">
                 Нажимая на кнопку, вы принимаете<br>условия передачи данных
             </p>
@@ -1359,13 +1367,23 @@
     </div>
 </div>
 <div class="d-none">
-    <div id="yandex-map" class="popup__map">
-        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A1c757e1fc6635eb1a9107a83d913f67c73b0834da8a009cd6c068c3a12fe23de&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
-    </div>
-</div>
-<div class="d-none">
-    <div id="google-map" class="popup__map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2250.780265280907!2d37.51962211548461!3d55.658030706765395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54d1799b58c39%3A0x9bcfc4048db15f5c!2z0YPQuy4g0J7QsdGA0YPRh9C10LLQsCwgMjEg0YHRgtGA0L7QtdC90LjQtSA0LCDQnNC-0YHQutCy0LAsIDExOTQyMQ!5e0!3m2!1sru!2sru!4v1602048951526!5m2!1sru!2sru" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    <form id="popup-reviews">
+        <div class="popup-form">
+            <h2 class="popup-form__title js-title"></h2>
+            <p class="popup-form__subtitle h4">
+                Мы перезвоним Вам
+            </p>
+            <input class="js-from" type="hidden" value="Всплывающая форма" name="title">
+            <input class="popup-form__input" type="text" placeholder="Имя" name="name" required>
+            <input class="popup-form__input" pattern="^[ 0-9]+$" type="tel" placeholder="Телефон" name="phone" required>
+            <textarea class="popup-form__input" name="messege" placeholder="Введите текст" required></textarea>
+            
+            <button type="submit" class="popup-form__btn h3">Отправить</button>
+           
+        </div>
+    </form>
+    <div id="fancyalert" class="fancyalert">
+        <div class="fancyalert-text">Спасибо за заявку,<br> в ближайшее время с Вами свяжутся!</div>
     </div>
 </div>
 <div class="d-none">

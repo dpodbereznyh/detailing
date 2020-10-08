@@ -179,6 +179,21 @@ $(document).ready(function () {
         });
         return false;
     });
+    $("#popup-reviews").submit(function(){
+        $.ajax({
+            type: "POST",
+            url: "send.php",
+            data: $(this).serialize()
+        }).done(function() {
+            // $(this).find("input").val("");
+            parent.jQuery.fancybox.getInstance().close();
+            $.fancybox.open({
+                src: '#fancyalert',
+            });
+            $("#popup-reviews").trigger("reset");
+        });
+        return false;
+    });
     
     $(".main-form__form").submit(function(){
         $.ajax({

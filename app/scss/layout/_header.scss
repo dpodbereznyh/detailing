@@ -71,6 +71,27 @@
   &__social_link {
     &:hover .header__social_link~icon-moon {
       color: red;
+
+    }
+  }
+  &__social_list-mobile {
+    align-items: center;
+    justify-content: center;
+    background: transparent!important;
+  }
+  &__social_item-mobile {
+    margin: 0 16px 0 0!important;
+    border-bottom: 0px!important;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &__social_link-mobile {
+    padding: 16px 0!important;
+    margin: 0 32px 0 0!important;
+    font-size: 30px!important;
+    &:last-child {
+      margin: 0 0 0 0!important;
     }
   }
 }
@@ -79,6 +100,9 @@
   .header__wrap {
     display: none;
   }
+  .header__social_list-mobile {
+    display: flex!important;
+  }
 }
 
 /*****Main Nav*****/
@@ -86,6 +110,8 @@
 .main-nav {
   background: $dark;
   border-radius: 0px;
+  max-height: 90vh;
+  overflow-y: auto;
 }
 .sm-clean {
   background: none;
