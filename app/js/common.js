@@ -97,7 +97,7 @@ $(document).ready(function () {
         }
     });
 
-    $(function() {
+    jQuery(function() {
         $('#main-menu').smartmenus({
             mainMenuSubOffsetX: -1,
             mainMenuSubOffsetY: 4,
@@ -107,7 +107,7 @@ $(document).ready(function () {
     });
 
 // SmartMenus mobile menu toggle button
-    $(function() {
+jQuery(function() {
         var $mainMenuState = $('#main-menu-state');
         if ($mainMenuState.length) {
             // animate mobile menu
@@ -218,10 +218,70 @@ $(document).ready(function () {
             $.fancybox.open({
                 src: '#fancyalert',
             });
-            $("юcallback__form").trigger("reset");
+            $(".callback__form").trigger("reset");
         });
         return false;
     });
+});
+
+var ymID = 68201572;
+
+$(function() {
+    $('.js-callback').on("click", function() {
+        var sendPopup = $(this).attr('data-send');
+        // $(modal).find('input[name=target]').val(parent);
+        $(".popup-form__btn").attr("data-goal", sendPopup);
+        console.log(sendPopup);
+    });
+
+});
+
+var metrikaGoals = function () {
+
+
+    $('.js-onClickGoal').click(function () {
+
+        var goal = this.dataset.goal;
+        // var gtagGoal = this.dataset.gtagGoal;
+        // var thisGoal = getCookie(goal);
+        if (typeof thisGoal == "undefined") {
+            if ((typeof goal !== 'undefined' || goal != '') && typeof ym !== 'undefined') {
+                ym(ymID, 'reachGoal', goal);
+            }
+
+            var date = new Date(new Date().getTime() + 720 * 3600 * 1000);
+            document.cookie = goal + "=1; path=/; expires=" + date.toUTCString();
+        }
+
+
+    });
+
+    $('.js-validate-form').click(function () {
+        var form = $(this).closest('.js-form-default');
+        var validated = 1;
+
+        $(form).find('input[required]').each(function (indexInArray, valueOfElement) {
+            if ($(valueOfElement).val() == "") {
+                validated = 0;
+            }
+        });
+
+        if (validated == 0) {
+
+
+            var goal = this.dataset.goal;
+            // var gtagGoal = this.dataset.gtagGoal;
+
+            if ((typeof goal !== 'undefined' || goal != '') && typeof ym !== 'undefined') {
+                ym(ymID, 'reachGoal', goal);
+            }
+        }
+        console.log(form);
+    });
+};
+
+$(document).ready(function () {
+    metrikaGoals();
 });
 
 

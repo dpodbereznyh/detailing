@@ -12,6 +12,21 @@
     <link rel="icon" type="image/png" sizes="16x16" href="#">
     <link rel="stylesheet" href="css/main.min.css">
 </head>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+ 
+    ym(68201572, "init", {
+         clickmap:true,
+         trackLinks:true,
+         accurateTrackBounce:true,
+         webvisor:true
+    });
+ </script>
+ <noscript><div><img src="https://mc.yandex.ru/watch/68201572" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+ <!-- /Yandex.Metrika counter -->
 
 <body>
 <header class="header" id="header">
@@ -34,7 +49,7 @@
                         <div class="header__contacts_item_icon">
                             <img src="img/icons/phone-icon.svg" alt="Контактный телефон">
                         </div>
-                        <a href="tel:+79689099094" class="header__contacts_item_content header__contacts_item-link h4 header__contacts_item_content-secondary">
+                        <a href="tel:+79689099094" class="header__contacts_item_content header__contacts_item-link h4 header__contacts_item_content-secondary js-onClickGoal" data-goal="clickPhone">
                             +7 (968) 909-909-4
                         </a>
                     </div>
@@ -51,9 +66,9 @@
                 </li>
             </ul>
             <ul class="header__social_list">
-                <li class="header__social_item"><a href="https://wa.me/tel:+79689099094" class="header__social_link icon-moon">&#xe902;</a></li>
-                <li class="header__social_item"><a href="https://www.instagram.com/detailing_na_leninskom" target="_blank" class="header__social_link icon-moon">&#xe900;</a></li>
-                <li class="header__social_item"><a href="https://vk.com/detailing_na_leninskom" target="_blank" class="header__social_link header__social_link-vk icon-moon">&#xe901;</a></li>
+                <li class="header__social_item"><a href="https://wa.me/tel:+79689099094" class="header__social_link icon-moon js-onClickGoal" data-goal="clickWhatsApp">&#xe902;</a></li>
+                <li class="header__social_item"><a href="https://www.instagram.com/detailing_na_leninskom" target="_blank" class="header__social_link icon-moon js-onClickGoal" data-goal="clickInstagram">&#xe900;</a></li>
+                <li class="header__social_item"><a href="https://vk.com/detailing_na_leninskom" target="_blank" class="header__social_link header__social_link-vk icon-moon js-onClickGoal" data-goal="clickVK">&#xe901;</a></li>
             </ul>
         </div>               
     </div>
@@ -79,11 +94,11 @@
                 <li><a href="#reviews" class="strong yakor">Отзывы</a></li>
                 <li><a href="#contacts" class="strong yakor">Контакты</a></li>  
                 <ul class="header__social_list-mobile">
-                    <li class="header__social_item-mobile"><a href="https://wa.me/tel:+79689099094" class="header__social_link-mobile icon-moon">&#xe902;</a></li>
-                    <li class="header__social_item-mobile"><a href="https://www.instagram.com/detailing_na_leninskom" target="_blank" class="header__social_link-mobile icon-moon">&#xe900;</a></li>
-                    <li class="header__social_item-mobile"><a href="https://vk.com/detailing_na_leninskom" target="_blank" class="header__social_link-mobile header__social_link-vk icon-moon">&#xe901;</a></li>
+                    <li class="header__social_item-mobile"><a href="https://wa.me/tel:+79689099094" class="header__social_link-mobile icon-moon js-onClickGoal" data-goal="clickWhatsApp">&#xe902;</a></li>
+                    <li class="header__social_item-mobile"><a href="https://www.instagram.com/detailing_na_leninskom" target="_blank" class="header__social_link-mobile icon-moon js-onClickGoal" data-goal="clickInstagram">&#xe900;</a></li>
+                    <li class="header__social_item-mobile"><a href="https://vk.com/detailing_na_leninskom" target="_blank" class="header__social_link-mobile header__social_link-vk icon-moon js-onClickGoal" data-goal="clickVK">&#xe901;</a></li>
                 </ul>
-                <li><a href="#" class="h3 js-callback" data-fancybox data-src="#popup-form" data-title="Консультация" data-input="Заказ обратного звонка с кнопки Консультация">Консультация</a></li>
+                <li><a href="#" class="h3 js-callback js-onClickGoal" data-goal="clickToHeaderPopup" data-send="sendToHeaderPopup" data-fancybox data-src="#popup-form" data-title="Консультация" data-input="Заказ обратного звонка с кнопки Консультация">Консультация</a></li>
                 
             </ul>            
         </div>        
@@ -117,7 +132,7 @@
                         </span>
                     </div>
                 </div>
-                <a href="#" class="main-screen__offer_stock_btn h3 js-callback" data-fancybox data-src="#popup-form" data-title="Заказать комплексную шумоизоляцию" data-input="Заказ комплексной шумоизоляции">
+                <a href="#" class="main-screen__offer_stock_btn h3 js-callback js-onClickGoal" data-goal="clickMainScreen" data-send="sendMainScreen" data-fancybox data-src="#popup-form" data-title="Заказать комплексную шумоизоляцию" data-input="Заказ комплексной шумоизоляции">
                     Заказать
                 </a>
             </div>
@@ -213,30 +228,31 @@
                     <div class="main-form__bg"></div>
                 </div>
                 <div class="col-12 col-lg-8">
-                    <form class="main-form__form">
+                    <form class="main-form__form js-form-default">
                         <p class="main-form__title h2">
                             <span>ОСТАВЬТЕ ЗАЯВКУ</span> НА ШУМОИЗОЛЯЦИЮ<br>ВАШЕГО АВТОМОБИЛЯ ПРЯМО СЕЙЧАС!
                         </p>
                         <div class="row">
                             <div class="order-1 order-sm-1 col-sm-6">
                                 <input type="hidden" value="Заявка в блоке ОСТАВЬТЕ ЗАЯВКУ НА ШУМОИЗОЛЯЦИЮ ВАШЕГО АВТОМОБИЛЯ ПРЯМО СЕЙЧАС!" name="title">
-                                <input class="main-form__input" type="text" placeholder="Марка автомобиля" name="brand" required>
+                                <input class="main-form__input" type="text" placeholder="Марка автомобиля" name="brand">
                             </div>
                             <div class="order-4 order-sm-2 col-sm-6">
                                 <input class="main-form__input" pattern="^[ 0-9]+$" type="tel" placeholder="Телефон" name="phone" required>
                             </div>
                             <div class="order-2 order-sm-3 col-sm-6">
-                                <input class="main-form__input" type="text" placeholder="Модель автомобиля" name="model" required>
+                                <input class="main-form__input" type="text" placeholder="Модель автомобиля" name="model">
                             </div>
                             <div class="order-5 order-sm-4 col-sm-6">
                                 <select class="main-form__input main-form__select p" name="option" id="">
                                     <option class="main-form__select_opt p">Вариант шумоизоляции</option>
-                                    <option>Пункт 1</option>
-                                    <option>Пункт 2</option>
+                                    <option>Комфорт</option>
+                                    <option>Премиум</option>
+                                    <option>Экстрим</option>
                                 </select>  
                             </div>
                             <div class="order-3 order-sm-5 col-sm-6">
-                                <input class="main-form__input" type="text" placeholder="Год выпуска" name="make" required>
+                                <input class="main-form__input" type="text" placeholder="Год выпуска" name="make">
                             </div>
                             <div class="order-6 col-sm-6">
                                 <div class="main-form__payment">
@@ -259,7 +275,7 @@
                                 </div>
                             </div>
                             <div class="order-7 col-lg-12 d-sm-flex align-items-center">
-                                <input class="main-form__btn h3" type="submit" placeholder="Отправить">
+                                <input class="main-form__btn h3 js-validate-form js-onClickGoal" data-goal="clicMainForm"  type="submit" placeholder="Отправить">
                                 <p class="main-form__accept p">
                                     Нажимая на кнопку, вы принимаете<br>условия передачи данных
                                 </p>
@@ -422,7 +438,7 @@
                                 <p class="strong options__mobile options__mobile-secondary">
                                     Выбрали тариф? Жмите<br>“Заказать”!
                                 </p>
-                                <a href="#" class="options__btn h3 js-callback" data-fancybox data-src="#popup-form" data-title='Тариф<br>"Комфорт"' data-input='Заказ обратного звонка с кнопки Заказать тариф "Комфорт"'>
+                                <a href="#" class="options__btn h3 js-callback js-onClickGoal" data-goal="clickOptions" data-send="sendOptions" data-fancybox data-src="#popup-form" data-title='Тариф<br>"Комфорт"' data-input='Заказ обратного звонка с кнопки Заказать тариф "Комфорт"'>
                                     Заказать
                                 </a>
                             </li>
@@ -514,7 +530,7 @@
                                 <p class="strong options__mobile options__mobile-secondary">
                                     Выбрали тариф? Жмите<br>“Заказать”!
                                 </p>
-                                <a href="#" class="options__btn h3 js-callback" data-fancybox data-src="#popup-form" data-title='Тариф<br>"Премиум"' data-input='Заказ обратного звонка с кнопки Заказать тариф "Премиум"'>
+                                <a href="#" class="options__btn h3 js-callback js-onClickGoal" data-goal="clickOptions" data-send="sendOptions" data-fancybox data-src="#popup-form" data-title='Тариф<br>"Премиум"' data-input='Заказ обратного звонка с кнопки Заказать тариф "Премиум"'>
                                     Заказать
                                 </a>
                             </li>
@@ -606,7 +622,7 @@
                                 <p class="strong options__mobile options__mobile-secondary">
                                     Выбрали тариф? Жмите<br>“Заказать”!
                                 </p>
-                                <a href="#" class="options__btn h3 js-callback" data-fancybox data-src="#popup-form" data-title='Тариф<br>"Экстрим"' data-input='Заказ обратного звонка с кнопки Заказать тариф "Экстрим"'>
+                                <a href="#" class="options__btn h3 js-callback js-onClickGoal" data-goal="clickOptions" data-send="sendOptions" data-fancybox data-src="#popup-form" data-title='Тариф<br>"Экстрим"' data-input='Заказ обратного звонка с кнопки Заказать тариф "Экстрим"'>
                                     Заказать
                                 </a>
                             </li>
@@ -637,13 +653,13 @@
                         <s class="p">10 000 ₽</s>
                         <span class="h1">8 000 ₽*</span>
                     </div>
-                    <a href="#" class="options__offer_order_btn h3 js-callback" data-fancybox data-src="#popup-form" data-title='Заказать<br>дополнительно' data-input='Заказ обратного звонка с кнопки "Заказать дополнительно"'>
+                    <a href="#" class="options__offer_order_btn h3 js-callback js-onClickGoal" data-goal="clickOptionsOffer" data-send="sendOptionsOffer"  data-fancybox data-src="#popup-form" data-title='Заказать<br>дополнительно' data-input='Заказ обратного звонка с кнопки "Заказать дополнительно"'>
                         Заказать дополнительно
                     </a>
                 </div>
             </div>
             <p class="options__note small">
-                *Указаны базовые цены на автомобили В класса, более точную цену можно узнать по телефону <a href="tel:+79263230014" class="options__note_link small">+7 926 323 00 14</a>. Также можете оставить заявку на расчет стоимости в форме выше.
+                *Указаны базовые цены на автомобили В класса, более точную цену можно узнать по телефону <a href="tel:+79263230014" class="options__note_link small js-onClickGoal" data-goal="clickPhone">+7 926 323 00 14</a>. Также можете оставить заявку на расчет стоимости в форме выше.
             </p>
         </div>
     </section>
@@ -1104,7 +1120,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-xl-8">
-                    <form class="callback__form">
+                    <form class="callback__form js-form-default">
                         <h2 class="callback__title h2">
                             Остались вопросы
                         </h2>
@@ -1112,9 +1128,9 @@
                             Мы перезвоним Вам
                         </p>
                         <div class="callback__form_wrap">
-                            <input type="text" name="name" placeholder="Имя" class="callback__form_input" required>
+                            <input type="text" name="name" placeholder="Имя" class="callback__form_input">
                             <input type="tel" name="phone" pattern="^[ 0-9]+$" placeholder="Телефон" class="callback__form_input" required>
-                            <input type="submit" class="callback__form_input callback__form_btn">
+                            <input type="submit" class="callback__form_input callback__form_btn js-validate-form js-onClickGoal" data-goal="clickCallback">
                         </div>
                         <label class="callback__form_label">
                             <input type="checkbox" id="checkbox" class="callback__form_checkbox" checked required>
@@ -1258,7 +1274,7 @@
                 </div>
             </div>
             <div class="reviews__mobile_nav">
-                <a href="#" class="reviews__btn js-callback" data-fancybox data-src="#popup-reviews" data-title="Оставить отзыв" data-input="Сообщение с кнопки Оставить отзыв">
+                <a href="#" class="reviews__btn js-callback js-onClickGoal" data-goal="clickReviews" data-send="sendReviews" data-fancybox data-src="#popup-reviews" data-title="Оставить отзыв" data-input="Сообщение с кнопки Оставить отзыв">
                     Оставить отзыв
                 </a>
                 <div class="reviews__swiper-pagination_wrap">
@@ -1297,7 +1313,7 @@
                             <div class="contacts__item_icon">
                                 <img src="img/icons/phone-icon.svg" alt="Контактный телефон">
                             </div>
-                            <a href="tel:+79689099094"  class="contacts__item_content p contacts__item_content-link">
+                            <a href="tel:+79689099094"  class="contacts__item_content p contacts__item_content-link js-onClickGoal" data-goal="clickPhone">
                                 +7 (968) 909-909-4
                             </a>                        
                         </li>
@@ -1311,14 +1327,14 @@
                         </li>
                     </ul>
                     <ul class="contacts__social_list">
-                    <li class="contacts__social_item"><a href="https://wa.me/+79689099094" class="contacts__social_link icon-moon">&#xe902;</a></li>
-                    <li class="contacts__social_item"><a href="https://www.instagram.com/detailing_na_leninskom" target="_blank" class="contacts__social_link icon-moon">&#xe900;</a></li>
-                    <li class="contacts__social_item"><a href="https://vk.com/detailing_na_leninskom" target="_blank" class="contacts__social_link contacts__social_link-vk icon-moon">&#xe901;</a></li>
+                    <li class="contacts__social_item"><a href="https://wa.me/+79689099094" class="contacts__social_link icon-moon js-onClickGoal" data-goal="clickWhatsApp">&#xe902;</a></li>
+                    <li class="contacts__social_item"><a href="https://www.instagram.com/detailing_na_leninskom" target="_blank" class="contacts__social_link icon-moon js-onClickGoal" data-goal="clickInstagram">&#xe900;</a></li>
+                    <li class="contacts__social_item"><a href="https://vk.com/detailing_na_leninskom" target="_blank" class="contacts__social_link contacts__social_link-vk icon-moon js-onClickGoal" data-goal="clickVK">&#xe901;</a></li>
                     </ul>
                     <!-- <a href="#" class="route__btn route__btn_ya h3" data-fancybox data-src="#yandex-map">Построить маршрут в Яндекс</a>
                     <a href="#" class="route__btn route__btn_google h3" data-fancybox data-src="#google-map">Построить маршрут в Google</a> -->
-                    <a target="_blank" href="https://yandex.ru/maps/?ll=37.868345%2C55.642933&mode=routes&rtext=~55.657870%2C37.521695&rtt=auto&ruri=~ymapsbm1%3A%2F%2Fgeo%3Fll%3D37.522%252C55.658%26spn%3D0.001%252C0.001%26text%3D%25D0%25A0%25D0%25BE%25D1%2581%25D1%2581%25D0%25B8%25D1%258F%252C%2520%25D0%259C%25D0%25BE%25D1%2581%25D0%25BA%25D0%25B2%25D0%25B0%252C%2520%25D1%2583%25D0%25BB%25D0%25B8%25D1%2586%25D0%25B0%2520%25D0%259E%25D0%25B1%25D1%2580%25D1%2583%25D1%2587%25D0%25B5%25D0%25B2%25D0%25B0%252C%252021%25D1%25814&source=wizroute&utm_medium=maps-desktop&z=8.88" class="route__btn route__btn_ya h3">Построить маршрут в Яндекс</a>
-                    <a target="_blank" href="https://www.google.ru/maps/dir//%D1%83%D0%BB.+%D0%9E%D0%B1%D1%80%D1%83%D1%87%D0%B5%D0%B2%D0%B0,+21+%D1%81%D1%82%D1%80%D0%BE%D0%B5%D0%BD%D0%B8%D0%B5+4,+%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0,+119421/@56.0621355,37.5581979,9z/data=!4m9!4m8!1m0!1m5!1m1!1s0x46b54d1799b58c39:0x9bcfc4048db15f5c!2m2!1d37.5218108!2d55.6580277!3e0" class="route__btn route__btn_google h3">Построить маршрут в Google</a>
+                    <a target="_blank" href="https://yandex.ru/maps/?ll=37.868345%2C55.642933&mode=routes&rtext=~55.657870%2C37.521695&rtt=auto&ruri=~ymapsbm1%3A%2F%2Fgeo%3Fll%3D37.522%252C55.658%26spn%3D0.001%252C0.001%26text%3D%25D0%25A0%25D0%25BE%25D1%2581%25D1%2581%25D0%25B8%25D1%258F%252C%2520%25D0%259C%25D0%25BE%25D1%2581%25D0%25BA%25D0%25B2%25D0%25B0%252C%2520%25D1%2583%25D0%25BB%25D0%25B8%25D1%2586%25D0%25B0%2520%25D0%259E%25D0%25B1%25D1%2580%25D1%2583%25D1%2587%25D0%25B5%25D0%25B2%25D0%25B0%252C%252021%25D1%25814&source=wizroute&utm_medium=maps-desktop&z=8.88" class="route__btn route__btn_ya h3 js-callback js-onClickGoal" data-goal="clickRoute">Построить маршрут в Яндекс</a>
+                    <a target="_blank" href="https://www.google.ru/maps/dir//%D1%83%D0%BB.+%D0%9E%D0%B1%D1%80%D1%83%D1%87%D0%B5%D0%B2%D0%B0,+21+%D1%81%D1%82%D1%80%D0%BE%D0%B5%D0%BD%D0%B8%D0%B5+4,+%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0,+119421/@56.0621355,37.5581979,9z/data=!4m9!4m8!1m0!1m5!1m1!1s0x46b54d1799b58c39:0x9bcfc4048db15f5c!2m2!1d37.5218108!2d55.6580277!3e0" class="route__btn route__btn_google h3 js-callback js-onClickGoal" data-goal="clickRoute">Построить маршрут в Google</a>
                 </div>                
             </div>
         </div>
@@ -1338,19 +1354,19 @@
     </div>
 </footer>
 <div class="d-none">
-    <form id="popup-form">
+    <form id="popup-form" class="js-form-default">
         <div class="popup-form">
             <h2 class="popup-form__title js-title"></h2>
             <p class="popup-form__subtitle h4">
                 Мы перезвоним Вам
             </p>
             <input class="js-from" type="hidden" value="Всплывающая форма" name="title">
-            <input class="popup-form__input" type="text" placeholder="Имя" name="name" required="">
-            <input class="popup-form__input" pattern="^[ 0-9]+$" type="tel" placeholder="Телефон" name="phone" required="">
+            <input class="popup-form__input" type="text" placeholder="Имя" name="name">
+            <input class="popup-form__input" pattern="^[ 0-9]+$" type="tel" placeholder="Телефон" name="phone" required>
             <p class="popup-form__note small">
                 Нажимая на кнопку, вы принимаете<br>условия передачи данных
             </p>
-            <button type="submit" class="popup-form__btn h3">Отправить</button>
+            <button type="submit" class="popup-form__btn h3 js-validate-form js-onClickGoal">Отправить</button>
            
         </div>
     </form>
@@ -1359,18 +1375,18 @@
     </div>
 </div>
 <div class="d-none">
-    <form id="popup-reviews">
+    <form id="popup-reviews" class="js-form-default">
         <div class="popup-form">
             <h2 class="popup-form__title js-title"></h2>
             <p class="popup-form__subtitle h4">
                 Мы перезвоним Вам
             </p>
             <input class="js-from" type="hidden" value="Всплывающая форма" name="title">
-            <input class="popup-form__input" type="text" placeholder="Имя" name="name" required>
+            <input class="popup-form__input" type="text" placeholder="Имя" name="name">
             <input class="popup-form__input" pattern="^[ 0-9]+$" type="tel" placeholder="Телефон" name="phone" required>
-            <textarea class="popup-form__input" name="messege" placeholder="Введите текст" required></textarea>
+            <textarea class="popup-form__input" name="messege" placeholder="Введите текст"></textarea>
             
-            <button type="submit" class="popup-form__btn h3">Отправить</button>
+            <button type="submit" class="popup-form__btn h3 js-validate-form js-onClickGoal">Отправить</button>
            
         </div>
     </form>
@@ -1391,4 +1407,3 @@
 <script src="js/scripts.min.js"></script>
 </body>
 </html>
-
