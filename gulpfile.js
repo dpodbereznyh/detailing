@@ -41,10 +41,9 @@ gulp.task('scripts', function() {
         // JQuery dependent
         // 'app/js/vendors/bootstrap.min.js',
         'app/js/vendors/jquery-3.4.1.js',
-        'app/js/vendors/jquery.smartmenus.js',
+        'app/js/vendors/jquery.smartmenus.min.js',
         'app/js/vendors/swiper.min.js',
         'app/js/vendors/jquery.fancybox.min.js',
-        'app/js/vendors/wow.js',
         'app/js/common.js', // Always at the end
     ])
         .pipe(concat('scripts.min.js'))

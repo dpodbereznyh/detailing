@@ -1,90 +1,93 @@
-//Options Slider
-var optionsSlider = new Swiper ('.options__container', {
-    slideClass: 'options__slide',
-    wrapperClass: 'options__wrapper',
-    slidesPerView: 4,
-    navigation: {
-        nextEl: '.options__button-next',
-        prevEl: '.options__button-prev',
-    },
-    pagination: {
-        el: '.options__swiper-pagination',
-        type: 'bullets',
-        clickable: true,
-        bulletClass: 'options__swiper_bullet',
-        bulletActiveClass: 'options__swiper_bullet-active',
-    },
-    breakpoints: {
-        320: {
-            slidesPerView: 1,
-            spaceBetween: 32
+document.addEventListener('DOMContentLoaded', function(){
+    //Options Slider
+    var optionsSlider = new Swiper ('.options__container', {
+        slideClass: 'options__slide',
+        wrapperClass: 'options__wrapper',
+        slidesPerView: 4,
+        navigation: {
+            nextEl: '.options__button-next',
+            prevEl: '.options__button-prev',
         },
-        747: {
-            slidesPerView: 4,
-            spaceBetween: 0
+        pagination: {
+            el: '.options__swiper-pagination',
+            type: 'bullets',
+            clickable: true,
+            bulletClass: 'options__swiper_bullet',
+            bulletActiveClass: 'options__swiper_bullet-active',
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 32
+            },
+            747: {
+                slidesPerView: 4,
+                spaceBetween: 0
+            }
         }
-    }
-});
-//Works Slider
-var worksSlider = new Swiper ('.works__container', {
-    dynamicBullets: true,
-    dynamicMainBullets: 3,
-    slideClass: 'works__item',
-    wrapperClass: 'works__wrapper',
-    slidesPerView: 4,
-    spaceBetween: 32,
-    navigation: {
-        nextEl: '.works__button-next',
-        prevEl: '.works__button-prev',
-    },
-    pagination: {
-        el: '.works__swiper-pagination',
-        type: 'bullets',
-        clickable: true,
-        bulletClass: 'works__swiper_bullet',
-        bulletActiveClass: 'works__swiper_bullet-active',
+    });
+    //Works Slider
+    var worksSlider = new Swiper ('.works__container', {
         dynamicBullets: true,
-        dynamicMainBullets: 5,
-        hideOnClick: false
-    },
-    breakpoints: {
-        320: {
-            slidesPerView: 1,
-            spaceBetween: 32
+        dynamicMainBullets: 3,
+        slideClass: 'works__item',
+        wrapperClass: 'works__wrapper',
+        slidesPerView: 4,
+        spaceBetween: 32,
+        navigation: {
+            nextEl: '.works__button-next',
+            prevEl: '.works__button-prev',
         },
-        480: {
-            slidesPerView: 2,
-            spaceBetween: 32
+        pagination: {
+            el: '.works__swiper-pagination',
+            type: 'bullets',
+            clickable: true,
+            bulletClass: 'works__swiper_bullet',
+            bulletActiveClass: 'works__swiper_bullet-active',
+            dynamicBullets: true,
+            dynamicMainBullets: 5,
+            hideOnClick: false
         },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 32
+            },
+            480: {
+                slidesPerView: 2,
+                spaceBetween: 32
+            },
 
-        820: {
-            slidesPerView: 3,
-            spaceBetween: 32
-        },
-        1200: {
-            slidesPerView: 4,
-            spaceBetween: 32
+            820: {
+                slidesPerView: 3,
+                spaceBetween: 32
+            },
+            1200: {
+                slidesPerView: 4,
+                spaceBetween: 32
+            }
         }
-    }
+    });
+    //Reviews Slider
+    var reviewsSlider = new Swiper ('.reviews__container', {
+        slideClass: 'reviews__item',
+        wrapperClass: 'reviews__wrapper',
+        slidesPerView: 1,
+        autoHeight: true,
+        navigation: {
+            nextEl: '.reviews__button-next',
+            prevEl: '.reviews__button-prev',
+        },
+        pagination: {
+            el: '.reviews__swiper-pagination',
+            type: 'bullets',
+            clickable: true,
+            bulletClass: 'reviews__swiper_bullet',
+            bulletActiveClass: 'reviews__swiper_bullet-active'
+        },
+    });
 });
-//Reviews Slider
-var reviewsSlider = new Swiper ('.reviews__container', {
-    slideClass: 'reviews__item',
-    wrapperClass: 'reviews__wrapper',
-    slidesPerView: 1,
-    autoHeight: true,
-    navigation: {
-        nextEl: '.reviews__button-next',
-        prevEl: '.reviews__button-prev',
-    },
-    pagination: {
-        el: '.reviews__swiper-pagination',
-        type: 'bullets',
-        clickable: true,
-        bulletClass: 'reviews__swiper_bullet',
-        bulletActiveClass: 'reviews__swiper_bullet-active'
-    },
-});
+
 
 $(document).ready(function () {
 
@@ -97,17 +100,17 @@ $(document).ready(function () {
         }
     });
 
-    jQuery(function() {
-        $('#main-menu').smartmenus({
-            mainMenuSubOffsetX: -1,
-            mainMenuSubOffsetY: 4,
-            subMenusSubOffsetX: 6,
-            subMenusSubOffsetY: -6
-        });
-    });
+    // $(function() {
+    //     $('#main-menu').smartmenus({
+    //         mainMenuSubOffsetX: -1,
+    //         mainMenuSubOffsetY: 4,
+    //         subMenusSubOffsetX: 6,
+    //         subMenusSubOffsetY: -6
+    //     });
+    // });
 
-// SmartMenus mobile menu toggle button
-jQuery(function() {
+    // SmartMenus mobile menu toggle button
+    $(function() {
         var $mainMenuState = $('#main-menu-state');
         if ($mainMenuState.length) {
             // animate mobile menu
@@ -283,7 +286,3 @@ var metrikaGoals = function () {
 $(document).ready(function () {
     metrikaGoals();
 });
-
-
-
-
