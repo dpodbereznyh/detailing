@@ -291,6 +291,15 @@
             <h2 class="section__title h2">
                 Варианты шумоизоляции
             </h2>
+            <div class="options__swiper-pagination_wrap">
+                <div class="swiper-pagination options__swiper-pagination"></div>
+                <div class="swiper-button-prev options__button-prev options__slider_button">
+                    <img src="img/icons/prev-arrow.svg" alt="">
+                </div>
+                <div class="swiper-button-next options__button-next options__slider_button">
+                    <img src="img/icons/next-arrow.svg" alt="">
+                </div>
+            </div>
             <div class="options__container swiper-container">
                 <div class="options__wrapper swiper-wrapper">
                     <div class="options__slide swiper-slide options__slide_desc">
@@ -300,9 +309,9 @@
                                     Тариф
                                 </p>
                             </li>
-                            <li class="options__column_desc_item options__column_desc_item-dark">
+                            <li class="options__column_desc_item options__column_desc_item-dark options__column_desc_item-price">
                                 <p class="strong">
-                                    Цена
+                                    Цена:
                                 </p>
                             </li>
                             <li class="options__column_desc_item">
@@ -362,12 +371,18 @@
                                     Комфорт
                                 </p>
                             </li>
-                            <li class="options__column_tariff_item options__column_tariff_item-price">
+                            <li class="options__column_tariff_item options__column_tariff_item-price options__column_tariff_item-class">
                                 <p class="strong options__mobile">
                                     Цена
                                 </p>
-                                <p class="h3">
-                                    24 000 ₽*
+                                <p class="h3 options__class">
+                                    <span >1 класс:</span>&#160;32 000 ₽*<a href="#" data-fancybox data-src="#popup-classes"  class="options__class_link small">?</a>
+                                </p>
+                                <p class="h3 options__class">
+                                    <span >2 класс:</span>&#160;38 000 ₽*<a href="#" data-fancybox data-src="#popup-classes"  class="options__class_link small">?</a>
+                                </p>
+                                <p class="h3 options__class">
+                                    <span >3 класс:</span>&#160;44 000 ₽*<a href="#" data-fancybox data-src="#popup-classes"  class="options__class_link small">?</a>
                                 </p>
                             </li>
                             <li class="options__column_tariff_item options__column_tariff_item-default">
@@ -455,12 +470,18 @@
                                     Премиум
                                 </p>
                             </li>
-                            <li class="options__column_tariff_item options__column_tariff_item-price">
+                            <li class="options__column_tariff_item options__column_tariff_item-price options__column_tariff_item-class">
                                 <p class="strong options__mobile">
                                     Цена
                                 </p>
-                                <p class="h3">
-                                    30 000 ₽*
+                                <p class="h3 options__class">
+                                    <span >1 класс:</span>&#160;36 000 ₽*<a href="#" data-fancybox data-src="#popup-classes"  class="options__class_link small">?</a>
+                                </p>
+                                <p class="h3 options__class">
+                                    <span >2 класс:</span>&#160;46 000 ₽*<a href="#" data-fancybox data-src="#popup-classes"  class="options__class_link small">?</a>
+                                </p>
+                                <p class="h3 options__class">
+                                    <span >3 класс:</span>&#160;52 000 ₽*<a href="#" data-fancybox data-src="#popup-classes"  class="options__class_link small">?</a>
                                 </p>
                             </li>
                             <li class="options__column_tariff_item options__column_tariff_item-default">
@@ -547,12 +568,18 @@
                                     Экстрим
                                 </p>
                             </li>
-                            <li class="options__column_tariff_item options__column_tariff_item-price">
+                            <li class="options__column_tariff_item options__column_tariff_item-price options__column_tariff_item-class">
                                 <p class="strong options__mobile">
                                     Цена
                                 </p>
-                                <p class="h3">
-                                    36 000 ₽*
+                                <p class="h3 options__class">
+                                    <span >1 класс:</span>&#160;42 000 ₽*<a href="#" data-fancybox data-src="#popup-classes"  class="options__class_link small">?</a>
+                                </p>
+                                <p class="h3 options__class">
+                                    <span >2 класс:</span>&#160;54 000 ₽*<a href="#" data-fancybox data-src="#popup-classes"  class="options__class_link small">?</a>
+                                </p>
+                                <p class="h3 options__class">
+                                    <span >3 класс:</span>&#160;60 000 ₽*<a href="#" data-fancybox data-src="#popup-classes"  class="options__class_link small">?</a>
                                 </p>
                             </li>
                             <li class="options__column_tariff_item options__column_tariff_item-default">
@@ -660,7 +687,7 @@
                 </div>
             </div>
             <p class="options__note small">
-                *Указаны базовые цены на автомобили В класса, более точную цену можно узнать по телефону <a href="tel:+79263230014" class="options__note_link small js-onClickGoal" data-goal="clickPhone">+7 926 323 00 14</a>. Также можете оставить заявку на расчет стоимости в форме выше.
+                *Цены зависят от класса автомобиля, принадлежность к классу вы можете посмотреть по <a href="#" data-fancybox data-src="#popup-classes" class="options__note_link small">ссылке</a>, либо уточнить по телефону <a href="tel:+79263230014" class="options__note_link-tel small js-onClickGoal" data-goal="clickPhone">+7 926 323 00 14</a>.
             </p>
         </div>
     </section>
@@ -1136,9 +1163,9 @@
                         <label class="callback__form_label">
                             <input type="checkbox" id="checkbox" class="callback__form_checkbox" checked required>
                             <span class="callback__form_checkbox-span"></span>
-                            <a href="#" target="_blank" class="callback__form_label_link p">
+                            <p class="callback__form_label_link p">
                                 Согласен на обработку персональных данных, ознакомлен с политикой конфиденциальности
-                            </a>
+                            </p>
                         </label>
                     </form>
                 </div>
@@ -1396,15 +1423,47 @@
     </div>
 </div>
 <div class="d-none">
+    <div id="popup-classes" class="nav-tabs__wrap">
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+              <li role="presentation" class="nav-tabs__item active strong"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">1 класс</a></li>
+              <li role="presentation" class="nav-tabs__item strong"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">2 класс</a></li>
+              <li role="presentation" class="nav-tabs__item strong"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">3 класс</a></li>
+            </ul>
+          
+            <!-- Tab panes -->
+            <div class="tab-content">
+              <div role="tabpanel" class="tab-pane active" id="home">
+                  <p class="p">
+                    Автомобили мини и среднего класса — седаны, хэтчбэки длиной до 4,5м:<br>
+                    Audi А 1, A3, A4; Chevrolet Lacetti; BMW Z3,Z4, 1, 3, Audi TT; CitroenС3, C4; VW Golf, Jetta; Toyota Corolla (хэтчбэк); Peugeot 307,308; Renault Megan; Mitsubishi Lancer; Nissan Almera; Mercedes-Benz,А, Slc (купе) ;Mazda 3; Opel Vectra, Astra; Skoda Octavia; Ford Focus, Fusion; Toyota Auris; Renault Logan; Daewoo Nexia; Saab 9-3 и т.п.
+                  </p>
+              </div>
+              <div role="tabpanel" class="tab-pane" id="profile">
+                  <p class="p">
+                    Автомобили среднего класса более 4,5м, бизнес-класса, универсалы, небольшие кроссоверы:<br>
+                    Mitsubishi Outlander, XL; Mercedes-Benz: В,С,GLK,E; Hyundai Tucson,; Chevrolet Captiva; Ford Maverick; Continental GT ; Honda CRV; Jeep Wrangler, Lexus GS; Citroen C5; BMW 4,5, 6; Audi A5, A6; Lexus IS 250,NX; Ford Mondeo; Toyota Corolla, Camry, Avensis, Venza; Hyundai NF, Sonata; Skoda SuperB, Yeti; Kia Magentis;Quoris,Kia Sportage, Optima, Cerato; VW Passat; Volvo S60, S70, S80; Opel Omega; Subaru Legacy;Forester; Nissan Maxima; Honda Accord; Renault Laguna; Peugeot 407;607; Mazda 6;CX-5,CX-7; Alfa Romeo; Jaguar S; Saab 9-5; Nissan X-trail, Qashqai; Toyota RAV 4; Suzuki Grand Vitara; BMW X3. INFINITI Q50,Q30,G35 и т.п.
+                  </p>
+              </div>
+              <div role="tabpanel" class="tab-pane" id="messages">
+                  <p class="p">
+                    Автомобили представительского класса, минивэны, полноразмерные кроссоверы, внедорожники:<br>
+                    Audi A8; BMW 7; Mercedes-Benz S-class,CLS,CL-class GLS; VW Phaeton; Lexus LS; Citroen C6; BMW X5, Х6; Audi Q7; Toyota LandCruiser 100,200,Prado; VW Touareg; Porsche Cayenne; Hummer H3; Lexus RX, LX 470,570,GX470; Nissan Patrol,Nissan Murano; Infiniti FX, QX; Pathfinder; Mitsubishi Pajero, Pajero Sport; Acura MDX; Land Rover; Range Rover; WV Sharan; Ford Galaxy, S-max; Ford edge; Chrysler Voyager; Hyundai Trajet; Santa-fe ,Equos; Kia Carnival,;Kia Sorento; JEEP Cherokee; Acura MDX, RDX; Volvo СХ90; Mercedes-Benz. Viano. GL. GLE. GLC .ML. GLS .Vito; VW Multivan, Caravelle; Chevrolet Tahoe, Suburban; Cadillac Escalade; MAZDA CX-7 и т.п.
+                  </p>
+              </div>
+            </div>
+          
+          </div>
+          
+    </div>
+</div>
+<div class="d-none">
     <div id="popup-video" class="popup__video">
         <div class="">
             <video src="img/main-screen/Шумоизоляция BMW X2.mp4" class="popup__video_video"></video>
         </div>
     </div>
 </div>
-       
-    
-    
 <script src="js/scripts.min.js"></script>
 </body>
 </html>

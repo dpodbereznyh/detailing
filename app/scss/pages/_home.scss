@@ -630,6 +630,13 @@
     color: $dark;
     border: 0.5px solid $dark_7;
   }
+  &__column_desc_item-price {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    height: 112px;
+  }
   &__column_desc_item-dark {
     background: $dark_9;
   }
@@ -656,6 +663,43 @@
     justify-content: center;
     background: $light;
     border: .5px solid $dark_7;
+    flex-direction: column;
+  }
+  &__column_tariff_item-class {
+    height: 112px;
+  }
+  &__class {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    position: relative;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__class_link {
+    margin-left: 8px;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(150%, -50%);
+    color: red;
+    width: 16px;
+    height: 16px;
+    border-radius: 2px;
+    border: 1px solid red;
+    text-align: center;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .35s;
+    &:hover {
+      color: $light;
+      border: 1px solid $light;
+      transition: .35s;
+    }
   }
   &__column_tariff_item-price {
     background: $default;
@@ -731,6 +775,14 @@
     position: relative;
     outline: none;
   }
+  &__swiper-pagination-top {
+    display: flex;
+    width: fit-content;
+    height: 10px;
+    margin: 0 auto;
+    position: relative;
+    outline: none;
+  }
   &__swiper_bullet {
     width: 10px;
     height: 10px;
@@ -749,7 +801,29 @@
       outline: none;
     }
   }
+  &__swiper_bullet-top {
+    width: 10px;
+    height: 10px;
+    margin-right: 16px;
+    background: $light;
+    &:last-child {
+      margin-right: 0;
+    }
+    &:focus {
+      outline: none;
+    }
+    &:active {
+      outline: none;
+    }
+    &:hover {
+      outline: none;
+    }
+  }
   &__swiper_bullet-active {
+    background: $secondary;
+    outline: none;
+  }
+  &__swiper_bullet-active-top {
     background: $secondary;
     outline: none;
   }
@@ -800,10 +874,18 @@
     color: $light;
   }
   &__note_link {
+    color: $secondary;
+    transition: .35s;
+    &:hover {
+      color: $secondary_d3;
+      transition: .35s;
+    }
+  }
+  &__note_link-tel {
     color: $light;
     transition: .35s;
     &:hover {
-      color: $secondary;
+      color: $secondary_d3;
       transition: .35s;
     }
   }
@@ -1201,7 +1283,6 @@
   &__form_label {
     display: flex;
     position: relative;
-    cursor: pointer;
     align-items: center;
     margin-top: 32px;
     > .callback__form_checkbox:checked + .callback__form_checkbox-span::after {
@@ -1228,6 +1309,7 @@
     margin-right: 16px;
     width: 20px;
     height: 20px;
+    cursor: pointer;
     min-width: 20px;
     border: 0.5px solid $dark_5;
     background: $light;
@@ -1236,10 +1318,6 @@
   &__form_label_link {
     color: $dark;
     transition: .35s;
-    &:hover {
-      color: $light;
-      transition: .35s;
-    }
   }
 }
 @include laptop {
@@ -1403,3 +1481,60 @@
     margin-bottom: 32px;
   }
 }
+
+/*****nav-tabs*****/
+.nav-tabs {
+  &__wrap {
+    max-width: 600px;
+  }
+  &__item a {
+    padding: 16px 32px;
+    border: none;
+    background: #4a8b99;
+    transition: .35s;
+    color: $light;
+    display: block;
+    &:hover {
+      background: #294d54;
+      transition: .35s;
+      color: $light;
+    }
+    &:active {
+      border: none;
+      outline: none;
+      background-color: $default_l4;
+    }
+    &:focus {
+      border: none;
+      outline: none;
+      background-color: $default_l4;
+    }
+  }
+}
+
+.nav-tabs {
+  border-bottom: none;
+  margin-bottom: 32px;
+}
+.tab-content {
+  // padding-top: 16px;
+}
+.tab-pane {
+  padding: 16px;
+    background-color: $default_l4;
+}
+.fancybox-content {
+  padding: 16px;
+}
+@include phones {
+  .nav-tabs__item {
+    padding: 0;
+  }
+  .fancybox-content {
+    padding: 16px;
+  }
+  .nav-tabs__item a {
+    padding: 16px;
+  }
+}
+/*****End nav-tabs*****/
